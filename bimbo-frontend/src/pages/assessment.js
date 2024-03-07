@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { MdOutlineClose } from "react-icons/md";
 import ScrollToTopOnMount from "../components/ScrollToTopOnMount";
 import { FiCheck } from "react-icons/fi";
@@ -7,6 +8,7 @@ import { FiChevronDown } from "react-icons/fi";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import validate from "../utils/validate";
+
 import logo1 from "../assets/logo1.png";
 import a1 from "../assets/a1.png";
 import a2 from "../assets/a2.png";
@@ -149,7 +151,7 @@ const Assessment = () => {
     try {
       setSending(true);
       const response = await axios.post(
-        "http://localhost:5000/api/email/send_email",
+        "https://backend-t9l2.onrender.com/api/email/send_email",
         {
           first_name: formData.firstName,
           last_name: formData.lastName,
@@ -249,13 +251,15 @@ const Assessment = () => {
 
   console.log(formData);
 
-  useEffect(() => {
-    if (sending === true || successText === true) {
-      document.body.classList.add("overflow-y-hidden");
-    } else {
-      document.body.classList.remove("overflow-y-hidden");
-    }
-  }, [sending, successText]);
+  // useEffect(() => {
+  //   setSending(sending);
+  //   setSuccessText(successText);
+  //   if (sending || successText) {
+  //     document.body.classList.add("overflow-y-hidden");
+  //   } else {
+  //     document.body.classList.remove("overflow-y-hidden");
+  //   }
+  // }, [sending, successText]);
 
   return (
     <div className="-mt-[70px] pt-[70px]">
@@ -2548,6 +2552,44 @@ const Assessment = () => {
               >
                 Loading...
               </h4>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <></>
+      )}
+
+      {successText === true ? (
+        <div
+          className="fixed message w-full h-full"
+          style={{
+            background: "#0008",
+            color: "white",
+            top: 0,
+            left: 0,
+            zIndex: 50,
+          }}
+        >
+          <div className="md:w-[756px] w-[90%]   bg-white md:rounded-[24px] rounded-[8px] py-[24px] md:py-[32px]">
+            <div
+              onClick={() => setSuccessText(!successText)}
+              className="flex justify-end md:mx-[6%] mx-[6%]"
+            >
+              <MdOutlineClose className="text-black text-[25px]" />
+            </div>
+            <h4 className="text-[24px] leading-[32px] font-[600] text-center text-black mt-[40px] md:text-[36px] md:font-[500px] md:leading-[44px] md:mt-[70px] md:mx-[16%] mx-[6%]">
+              Thank you for taking the clarity assessment. Your score has been
+              sent to your email’
+            </h4>
+            <div className="flex justify-center md:mt-[60px] mt-[50px] md:mx-[8%] mx-[6%]">
+              <Link to="/">
+                <button
+                  onClick={() => setSuccessText(!successText)}
+                  className="bg-secondary hover:bg-black text-white px-[18px] py-[10px] rounded-[8px] text-[16px] font-[500]  w-full md:w-[207px] mx-auto"
+                >
+                  Continue
+                </button>
+              </Link>
             </div>
           </div>
         </div>

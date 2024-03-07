@@ -11,8 +11,8 @@ const About = () => {
         <h4 className="py-[48px] text-[40px] font-[700] lg:text-[60px] lg:font-[600] lg:leading-[72px] leading-[48px] lg:w-[726px] text-[#021732]">
           LEGACY IS GREATER THAN CURRENCY
         </h4>
-        <div className="py-[48px]">
-          <div className="md:py-[40%] py-[75%]   relative overflow-hidden mx-auto rounded-[24px] md:rounded-[0px]">
+        <div className="">
+          <div className="md:py-[30%] py-[75%]   relative overflow-hidden mx-auto rounded-[24px] md:rounded-[0px]">
             <img
               className="rounded-[24px] absolute top-0 left-0 w-[150%] h-[100%] object-cover "
               src={home2}
