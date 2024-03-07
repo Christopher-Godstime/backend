@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+
+:root {
+    --primary: #ffedd5;
+    --secondary: #f97316;
+  }
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--primary);
+  }
+
+  *::-webkit-scrollbar {
+    width: 8px;
+    height: 6px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: var(--primary);
+    border-radius: 20px;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border-radius: 50px;
+    border: 0px solid var(--primary);
+  }
+
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    @variants responsive {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+      }
+    }
+  }
+
+  @media (max-width: 668px) {
+    /* Hide scrollbar for Chrome, Safari, and Opera */
+    *::-webkit-scrollbar {
+      display: none;
+    }
+  
+    /* Hide scrollbar for IE, Edge, and Firefox */
+    * {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+
+  .hidden-input2 {
+    position: absolute;
+    opacity: 0;
+  }
+
+  
+  .custom-radio2 {
+    /* width: 40px;
+    height: 40px; */
+    border: 1px solid #D0D5DD; 
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .hidden-input2:checked + .custom-radio2 {
+    background-color: #021732; 
+    border-color: #D0D5DD; 
+  }
+
+  
+  .checkmark2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   width: max-content;
+   height: max-content;
+    background-color: #021732; 
+    border-radius: 4px;
+    display: none;
+  }
+
+
+  .hidden-input2:checked + .custom-radio2 .checkmark2 {
+    display: block;
+  }
+
+  .loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading div{
+    
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: text 1s ease-in-out infinite;
+}
+
+
+@keyframes text{
+    50%{opacity: 0.1}
+    
+}
+
+.loading path{
+    stroke-dasharray: 22;
+    stroke-dashoffset: 1;
+    animation: dash 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite alternate-reverse;
+}
+
+@keyframes dash{
+    to {stroke-dashoffset: 234;}
+}
+
+
+
+
+

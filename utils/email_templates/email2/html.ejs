@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .parent {
+      background-color: white;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+    .logo {
+      width: 51px;
+    }
+    .heading {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 28px;
+      margin-top: 30px;
+    }
+    .hello {
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 30px;
+    }
+    .name {
+      font-weight: 700;
+    }
+    .text {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      margin-top: 20px;
+    }
+    .background {
+      margin-top: 10px;
+    }
+    .heading2 {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+      margin-top: 20px;
+    }
+    .link {
+      color: orange;
+    }
+    .social {
+      display: flex;
+      gap: 12px;
+    }
+    /* .footer {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+    } */
+    .socialIcon {
+      width: 24px;
+    }
+    .or {
+      margin-top: 20px;
+      font-weight: 300;
+      font-size: 16px;
+    }
+  </style>
+  <body style="font-family: 'Work Sans', sans-serif">
+    <div class="parent">
+      <div>
+        <img
+          class="logo w-[51px]"
+          src="<%- base_url %>/assets/mail/logo4.png"
+        />
+      </div>
+      <h4 class="heading" style="color: #000000">
+        Your Clarity Assessment overall score is <%- score %>%
+      </h4>
+      <h4 class="hello" style="color: #000000">
+        Hello <span class="name"> <%- first_name %></span>,
+      </h4>
+      <h4 class="text" style="color: #000000">
+        Clarity is in phases, and no matter the phase you are in, your clarity
+        can deepen so that you can achieve better outcomes and we are ready to
+        work with you to become the best version of yourself.
+      </h4>
+      <h4 class="text" style="color: #000000">
+        As a next step, our team is offering you a customized coaching
+        experience through any of these two pathways that we recommend for you:
+      </h4>
+      <div class="background">
+        <img src="<%- base_url %>/assets/mail/background.png" />
+      </div>
+      <h4 class="heading2" style="color: #000000">Discovering the New You</h4>
+      <h4 class="text" style="color: #000000">
+        This coaching package empowers you to embrace change, unlock hidden
+        talents, and pursue paths aligned with your authentic self. The courses
+        in this package include removing blocks to your clarity,
+        discovering/unleashing a new version of you, leadership, and
+        accountability. To sign up, <span class="link"> click here. </span>
+      </h4>
+      <h4 class="or" style="color: #000000">OR</h4>
+      <h4 class="heading2" style="color: #000000">Gaining Mastery</h4>
+      <h4 class="text" style="color: #000000">
+        This coaching package empowers you to make significant contributions,
+        drive innovation, and pursue your passions with precision and
+        effectiveness, leading to personal fulfillment, professional success,
+        and significance. The courses in this package include Getting Unstuck,
+        Increasing Productivity, Embarking on A New Journey/Project, and
+        Thriving. To sign up, <span class="link"> click here. </span>
+      </h4>
+      <h4 class="text" style="color: #000000">
+        We look forward to welcoming you!
+      </h4>
+      <h4 class="text" style="color: #000000">
+        Keep transforming,<br />The Bimbo Mesele Coaching Team
+      </h4>
+      <div class="footer">
+        <div class="social">
+          <div>
+            <img
+              class="socialIcon"
+              src="<%- base_url %>/assets/mail/medium.png"
+            />
+          </div>
+          <div>
+            <img
+              class="socialIcon"
+              src="<%- base_url %>/assets/mail/linkedin.png"
+            />
+          </div>
+          <div>
+            <img
+              class="socialIcon"
+              src="<%- base_url %>/assets/mail/instagram.png"
+            />
+          </div>
+          <div>
+            <img class="socialIcon" src="<%- base_url %>/assets/mail/x.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
