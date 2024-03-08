@@ -1,7 +1,16 @@
 import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import pic3 from "../assets/pic3.png";
+import pic2 from "../assets/pic2.png";
+import pic5 from "../assets/pic5.png";
+import pic7 from "../assets/pic7.png";
 import home from "../assets/home.png";
 import home2 from "../assets/home2.png";
+import test1 from "../assets/test1.png";
+import test2 from "../assets/test2.png";
+import test3 from "../assets/test3.png";
+import test4 from "../assets/test4.png";
+import test5 from "../assets/test5.png";
 import quote from "../assets/quote.png";
 import angle from "../assets/angle.png";
 import ScrollToTopOnMount from "../components/ScrollToTopOnMount";
@@ -10,33 +19,33 @@ import { FiArrowUp } from "react-icons/fi";
 const testimonials = [
   {
     id: 1,
-    image: home2,
+    image: test5,
     text: "Ride the wave of success with Rivala, as it empowers you to gain the upper hand in every endeavor. Unleash the potential of cutting-edge technology and strategic advantages, propelling you confidently towards triumph.",
     name: "Maryanne Jones",
   },
   {
     id: 2,
-    image: home2,
-    text: "The coaching program was really for me because I needed to kick start my year on agreater note and being coached by Dr. Bimbo helped me achieve this. Dr Bimbo is superimpressive in how she makes seemingly difficult task so simple and makes us have thatfeel of anything at all can be achievable. I am deeply grateful and to the amazing teamthat made this seamless, God bless you!",
-    name: "Peter",
+    image: test1,
+    text: "I am very grateful to Dr. Bimbo for showing me the four levels of consciousness and how the area of my life can be at any of these levels. She taught me how to grow better and I have started practicing some of the lessons learnt during the coaching program which has improved my life.",
+    name: "- Adeniji Adedapo Bolaji",
   },
   {
     id: 3,
-    image: home2,
-    text: "The coaching program was really for me because I needed to kick start my year on agreater note and being coached by Dr. Bimbo helped me achieve this. Dr Bimbo is superimpressive in how she makes seemingly difficult task so simple and makes us have thatfeel of anything at all can be achievable. I am deeply grateful and to the amazing teamthat made this seamless, God bless you!",
+    image: test2,
+    text: "The coaching program was really for me because I needed to kick start my year on a greater note and being coached by Dr. Bimbo helped me achieve this. Dr Bimbo is super impressive in how she makes seemingly difficult task so simple and makes us have that feel of anything at all can be achievable. I am deeply grateful and to the amazing team that made this seamless, God bless you!",
     name: "Abimbola Galaxy",
   },
   {
     id: 4,
-    image: home2,
-    text: "Ride the wave of success with Rivala, as it empowers you to gain the upper hand in every endeavor. Unleash the potential of cutting-edge technology and strategic advantages, propelling you confidently towards triumph.",
-    name: "John",
+    image: test3,
+    text: "When I signed up for coaching program with Dr. Bimbo, I was initially hesitant aboutgoing over the past and becoming vulnerable. However, the coaching was quite helpful for me. The coaching sessions for me were about discovering and becoming more conscious of who I am and being more aware of my unique identity rather than being defined by past circumstances and events. The coaching program was worth every minute for me.",
+    name: "Tare Amangele",
   },
   {
     id: 5,
-    image: home2,
-    text: "The coaching program was really for me because I needed to kick start my year on agreater note and being coached by Dr. Bimbo helped me achieve this. ",
-    name: "James",
+    image: test4,
+    text: "I have learnt about the different levels of consciousness and how to relate it to rate each aspect of my life. The lessons have been very helpful for me as I start my 2024. ",
+    name: "- Obe Adedoyin",
   },
 ];
 
@@ -92,10 +101,11 @@ const Home = () => {
     <div>
       <ScrollToTopOnMount />
       <div
-        className={`bg-no-repeat z-10 -mt-[70px]   w-full bg-cover bg-center h-screen  relative   `}
+        className={`bg-no-repeat z-10 -mt-[70px] w-full bg-cover bg-center h-screen  relative`}
         style={{
-          backgroundImage: `url(${home})`,
+          backgroundImage: `url(${pic3})`,
           backgroundSize: "cover",
+          backgroundPosition: "top",
           backdropFilter: "",
         }}
       >
@@ -109,7 +119,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[12%]">
+      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[15%]">
         <ul className="flex relative justify-between items-center text-[24px] font-[400] text-[#021732] rounded-[50px] bg-gray-100 w-fit mx-auto ">
           {Menus.map((menu, i) => (
             <li key={i} className="">
@@ -150,7 +160,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[12%]  mt-[50px]">
+      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[15%]  mt-[50px]">
         <h4 className="text-center text-[36px] font-[700] leading-[44px] xl:font-[600] xl:text-[48px] xl:leading-[60px]">
           Courses
         </h4>
@@ -205,7 +215,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[12%] ">
+      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[15%] ">
         <div className="bg-[#FFF8E6] rounded-[16px] px-[24px]  ">
           <div className="md:w-[64%] h-[560px] md:h-[512px] flex flex-col justify-center mx-auto">
             <h4 className="text-black text-[30px] leading-[38px] font-[600] mb-[10px] text-center xl:text-[48px] xl:font-[700] xl:leading-[60px] ">
@@ -223,7 +233,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[12%]">
+      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[15%]">
         <div className="flex justify-between items-end border-b-[1px] border-gray-200 pb-[20px]">
           <h4 className="text-[36px] font-[500] leading-[44px]">
             Upcoming events
@@ -376,7 +386,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[12%]">
+      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[15%]">
         <div className="flex justify-between items-end border-b-[1px] border-gray-200 pb-[10px]">
           <h4 className="text-[36px] font-[600] leading-[44px]">
             Recent blog posts
@@ -446,7 +456,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[12%]">
+      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[15%]">
         <div className="lg:flex gap-[50px] items-center">
           <div className="lg:w-[42%]">
             <h4 className="text-[30px] font-[700] xl:text-[48px] xl:font-[600]">
@@ -465,7 +475,7 @@ const Home = () => {
               <div className="md:pb-[140%] pb-[160%]  pr-[24px] relative overflow-hidden ">
                 <img
                   className="lg:rounded-[24px] rounded-[16px] absolute top-0 left-0 w-[100%] h-[100%] object-cover "
-                  src={home2}
+                  src={pic2}
                   alt="Background"
                 />
 
@@ -482,7 +492,7 @@ const Home = () => {
               <div className="md:pb-[280%] pb-[320%] pr-[24px] relative overflow-hidden">
                 <img
                   className="lg:rounded-[24px] rounded-[16px] absolute top-0 left-0 w-[100%] h-[100%] object-cover"
-                  src={home2}
+                  src={pic5}
                   alt="Background"
                 />
               </div>
@@ -496,7 +506,7 @@ const Home = () => {
               <div className="md:pb-[280%] pb-[320%] pr-[24px] relative overflow-hidden">
                 <img
                   className="lg:rounded-[24px] rounded-[16px] absolute top-0 left-0 w-[100%] h-[100%] object-cover"
-                  src={home2}
+                  src={pic7}
                   alt="Background"
                 />
               </div>
@@ -510,7 +520,7 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[12%]">
+      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[15%]">
         <div className="lg:flex gap-[40px]">
           <div className="lg:w-[60%] bg-[#02152E] rounded-[24px] h-[416px] relative">
             <button className="w-[65px] h-[65px] rounded-full border-[1px] border-primary flex justify-center items-center bg-white absolute top-[48px] right-[24px] lg:right-[48px]">

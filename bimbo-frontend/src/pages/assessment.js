@@ -17,7 +17,7 @@ import a4 from "../assets/a4.png";
 import a5 from "../assets/a5.png";
 import a6 from "../assets/a6.png";
 
-const Assessment = () => {
+const Assessment = ({ showAssessment, setShowAssessment }) => {
   const [countryState, setCountryState] = useState({
     loading: false,
     countries: [],
@@ -251,27 +251,30 @@ const Assessment = () => {
 
   console.log(formData);
 
-  // useEffect(() => {
-  //   setSending(sending);
-  //   setSuccessText(successText);
-  //   if (sending || successText) {
-  //     document.body.classList.add("overflow-y-hidden");
-  //   } else {
-  //     document.body.classList.remove("overflow-y-hidden");
-  //   }
-  // }, [sending, successText]);
+  useEffect(() => {
+    setSending(sending);
+    setSuccessText(successText);
+    setShowAssessment(showAssessment);
+    if (sending || successText || showAssessment) {
+      document.body.classList.add("overflow-y-hidden");
+    } else {
+      document.body.classList.remove("overflow-y-hidden");
+    }
+  }, [sending, successText, showAssessment]);
 
   return (
-    <div className="-mt-[70px] pt-[70px]">
-      <ScrollToTopOnMount />
-      <div className="bg-black md:p-[5%] px-[4%] 2xl:px-[12%] py-[70px] ">
-        <div className="bg-white lg:p-[0px]  p-[5%] lg:px-[32px] md:rounded-[24px] rounded-[8px]">
+    <div className="">
+      <div className=" text-black">
+        <div className="bg-white lg:p-[0px]  p-[5%] lg:px-[32px] md:rounded-[24px] rounded-[8px] overflow-y-auto">
           <div className="lg:p-[32px] pb-[20px] border-b-[1px] border-gray-300">
             <div className="flex justify-between items-center gap-[20px]">
               <h4 className="text-[24px] font-[600] md:text-[36px]">
                 Discovering the New You
               </h4>
-              <MdOutlineClose className="text-[#021732] text-[32px]" />
+              <MdOutlineClose
+                onClick={() => setShowAssessment(!showAssessment)}
+                className="text-[#021732] text-[32px] cursor-pointer"
+              />
             </div>
             <div className="font-[500] mt-[5px] md:mt-[0px] text-text">
               Follow the simple 6 steps to complete your assessment
@@ -405,7 +408,7 @@ const Assessment = () => {
                     </div>
                     <h4 className="text-text font-[500]">Step 1/6</h4>
                   </div>
-                  <h4 className="md:text-[36px] md:font-[500] lg:w-[70%] md:leading-[44px] text-[24px] font-[600] leading-[32px] mt-[40px] md:mt-[0px]">
+                  <h4 className="md:text-[36px] md:font-[500]  md:leading-[44px] text-[24px] font-[600] leading-[32px] mt-[40px] md:mt-[0px]">
                     Let’s start with your personal information
                   </h4>
                   <div className="mt-[24px] grid grid-cols-1 gap-[17px]">
@@ -623,11 +626,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment1")
                             }
+                            checked={formData.assessment1 === "1"}
                           />
                           <label
                             htmlFor="1"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                1
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -658,11 +667,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment1")
                             }
+                            checked={formData.assessment1 === "2"}
                           />
                           <label
                             htmlFor="2"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                2
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -693,11 +708,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment1")
                             }
+                            checked={formData.assessment1 === "3"}
                           />
                           <label
                             htmlFor="3"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                3
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -728,11 +749,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment1")
                             }
+                            checked={formData.assessment1 === "4"}
                           />
                           <label
                             htmlFor="4"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                4
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -763,11 +790,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment1")
                             }
+                            checked={formData.assessment1 === "5"}
                           />
                           <label
                             htmlFor="5"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                5
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -800,11 +833,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment1")
                             }
+                            checked={formData.assessment1 === "6"}
                           />
                           <label
                             htmlFor="6"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                6
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -835,11 +874,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment1")
                             }
+                            checked={formData.assessment1 === "7"}
                           />
                           <label
                             htmlFor="7"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                7
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -870,11 +915,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment1")
                             }
+                            checked={formData.assessment1 === "8"}
                           />
                           <label
                             htmlFor="8"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                8
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -905,11 +956,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment1")
                             }
+                            checked={formData.assessment1 === "9"}
                           />
                           <label
                             htmlFor="9"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                9
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -940,11 +997,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment1")
                             }
+                            checked={formData.assessment1 === "10"}
                           />
                           <label
                             htmlFor="10"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                10
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1001,11 +1064,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment2")
                             }
+                            checked={formData.assessment2 === "1"}
                           />
                           <label
                             htmlFor="1"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                1
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1036,11 +1105,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment2")
                             }
+                            checked={formData.assessment2 === "2"}
                           />
                           <label
                             htmlFor="2"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                2
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1071,11 +1146,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment2")
                             }
+                            checked={formData.assessment2 === "3"}
                           />
                           <label
                             htmlFor="3"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                3
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1106,11 +1187,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment2")
                             }
+                            checked={formData.assessment2 === "4"}
                           />
                           <label
                             htmlFor="4"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                4
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1141,11 +1228,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment2")
                             }
+                            checked={formData.assessment2 === "5"}
                           />
                           <label
                             htmlFor="5"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                5
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1178,11 +1271,18 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment2")
                             }
+                            checked={formData.assessment2 === "6"}
                           />
+
                           <label
                             htmlFor="6"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                6
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1213,11 +1313,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment2")
                             }
+                            checked={formData.assessment2 === "7"}
                           />
                           <label
                             htmlFor="7"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                7
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1248,11 +1354,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment2")
                             }
+                            checked={formData.assessment2 === "8"}
                           />
                           <label
                             htmlFor="8"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                8
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1283,11 +1395,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment2")
                             }
+                            checked={formData.assessment2 === "9"}
                           />
                           <label
                             htmlFor="9"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                9
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1318,11 +1436,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment2")
                             }
+                            checked={formData.assessment2 === "10"}
                           />
                           <label
                             htmlFor="10"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                10
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1379,11 +1503,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment3")
                             }
+                            checked={formData.assessment3 === "1"}
                           />
                           <label
                             htmlFor="1"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                1
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1414,11 +1544,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment3")
                             }
+                            checked={formData.assessment3 === "2"}
                           />
                           <label
                             htmlFor="2"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                2
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1449,11 +1585,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment3")
                             }
+                            checked={formData.assessment3 === "3"}
                           />
                           <label
                             htmlFor="3"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                3
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1484,11 +1626,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment3")
                             }
+                            checked={formData.assessment3 === "4"}
                           />
                           <label
                             htmlFor="4"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                4
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1519,11 +1667,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment3")
                             }
+                            checked={formData.assessment3 === "5"}
                           />
                           <label
                             htmlFor="5"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                5
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1556,11 +1710,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment3")
                             }
+                            checked={formData.assessment3 === "6"}
                           />
                           <label
                             htmlFor="6"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                6
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1591,11 +1751,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment3")
                             }
+                            checked={formData.assessment3 === "7"}
                           />
                           <label
                             htmlFor="7"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                7
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1626,11 +1792,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment3")
                             }
+                            checked={formData.assessment3 === "8"}
                           />
                           <label
                             htmlFor="8"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                8
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1661,11 +1833,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment3")
                             }
+                            checked={formData.assessment3 === "9"}
                           />
                           <label
                             htmlFor="9"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                9
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1696,11 +1874,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment3")
                             }
+                            checked={formData.assessment3 === "10"}
                           />
                           <label
                             htmlFor="10"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                10
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1758,11 +1942,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment4")
                             }
+                            checked={formData.assessment4 === "1"}
                           />
                           <label
                             htmlFor="1"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                1
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1793,11 +1983,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment4")
                             }
+                            checked={formData.assessment4 === "2"}
                           />
                           <label
                             htmlFor="2"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                2
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1828,11 +2024,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment4")
                             }
+                            checked={formData.assessment4 === "3"}
                           />
                           <label
                             htmlFor="3"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                3
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1863,11 +2065,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment4")
                             }
+                            checked={formData.assessment4 === "4"}
                           />
                           <label
                             htmlFor="4"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                4
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1898,11 +2106,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment4")
                             }
+                            checked={formData.assessment4 === "5"}
                           />
                           <label
                             htmlFor="5"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                5
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1935,11 +2149,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment4")
                             }
+                            checked={formData.assessment4 === "6"}
                           />
                           <label
                             htmlFor="6"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                6
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -1970,11 +2190,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment4")
                             }
+                            checked={formData.assessment4 === "7"}
                           />
                           <label
                             htmlFor="7"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                7
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -2005,11 +2231,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment4")
                             }
+                            checked={formData.assessment4 === "8"}
                           />
                           <label
                             htmlFor="8"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                8
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -2040,11 +2272,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment4")
                             }
+                            checked={formData.assessment4 === "9"}
                           />
                           <label
                             htmlFor="9"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                9
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -2075,11 +2313,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment4")
                             }
+                            checked={formData.assessment4 === "10"}
                           />
                           <label
                             htmlFor="10"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                10
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -2137,11 +2381,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment5")
                             }
+                            checked={formData.assessment5 === "1"}
                           />
                           <label
                             htmlFor="1"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                1
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -2172,11 +2422,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment5")
                             }
+                            checked={formData.assessment5 === "2"}
                           />
                           <label
                             htmlFor="2"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                2
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -2207,11 +2463,18 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment5")
                             }
+                            checked={formData.assessment5 === "3"}
                           />
+
                           <label
                             htmlFor="3"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                3
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -2242,11 +2505,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment5")
                             }
+                            checked={formData.assessment5 === "4"}
                           />
                           <label
                             htmlFor="4"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                4
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -2277,11 +2546,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment5")
                             }
+                            checked={formData.assessment5 === "5"}
                           />
                           <label
                             htmlFor="5"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                5
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -2314,11 +2589,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment5")
                             }
+                            checked={formData.assessment5 === "6"}
                           />
                           <label
                             htmlFor="6"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                6
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -2349,11 +2630,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment5")
                             }
+                            checked={formData.assessment5 === "7"}
                           />
                           <label
                             htmlFor="7"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                7
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -2384,11 +2671,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment5")
                             }
+                            checked={formData.assessment5 === "8"}
                           />
                           <label
                             htmlFor="8"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                8
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -2419,11 +2712,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment5")
                             }
+                            checked={formData.assessment5 === "9"}
                           />
                           <label
                             htmlFor="9"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                9
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -2454,11 +2753,17 @@ const Assessment = () => {
                             onChange={(e) =>
                               handleChange(e.target.value, "assessment5")
                             }
+                            checked={formData.assessment5 === "10"}
                           />
                           <label
                             htmlFor="10"
                             className="custom-radio2 h-[51px] w-full md:w-[40px] md:h-[40px]"
                           >
+                            <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
+                              <div className="text-black leading-[0px] text-[20px] font-[500] block md:hidden">
+                                10
+                              </div>
+                            </div>
                             <div className="checkmark2">
                               <div className="h-[45px] w-full md:w-[40px] md:h-[40px] flex justify-center items-center">
                                 <FiCheck className="text-[25px] text-white hidden md:block" />
@@ -2502,9 +2807,9 @@ const Assessment = () => {
                   )}
                 </div>
 
-                <div>
+                <div className="w-full">
                   {page !== formData.length - 0 && (
-                    <div>
+                    <div className="w-full flex justify-end">
                       {page === formTiles.length - 1 && (
                         <button
                           onClick={handleSubmit}
@@ -2545,12 +2850,12 @@ const Assessment = () => {
             <div>
               <img className="w-[170px]" src={logo1} />
               <h4
-                className="text-white flex justify-center  text-[20px] font-bold"
+                className="text-white flex justify-center  text-[16px] font-[500] mt-[10px]"
                 fill="#fff"
                 x="5"
                 y="45"
               >
-                Loading...
+                Processing Assessment...
               </h4>
             </div>
           </div>
@@ -2575,21 +2880,22 @@ const Assessment = () => {
               onClick={() => setSuccessText(!successText)}
               className="flex justify-end md:mx-[6%] mx-[6%]"
             >
-              <MdOutlineClose className="text-black text-[25px]" />
+              <MdOutlineClose className="text-black text-[25px] cursor-pointer" />
             </div>
             <h4 className="text-[24px] leading-[32px] font-[600] text-center text-black mt-[40px] md:text-[36px] md:font-[500px] md:leading-[44px] md:mt-[70px] md:mx-[16%] mx-[6%]">
               Thank you for taking the clarity assessment. Your score has been
               sent to your email’
             </h4>
             <div className="flex justify-center md:mt-[60px] mt-[50px] md:mx-[8%] mx-[6%]">
-              <Link to="/">
-                <button
-                  onClick={() => setSuccessText(!successText)}
-                  className="bg-secondary hover:bg-black text-white px-[18px] py-[10px] rounded-[8px] text-[16px] font-[500]  w-full md:w-[207px] mx-auto"
-                >
-                  Continue
-                </button>
-              </Link>
+              <button
+                onClick={() => {
+                  setSuccessText(!successText);
+                  setShowAssessment(!showAssessment);
+                }}
+                className="bg-secondary hover:bg-black text-white px-[18px] py-[10px] rounded-[8px] text-[16px] font-[500]  w-full md:w-[207px] mx-auto"
+              >
+                Continue
+              </button>
             </div>
           </div>
         </div>

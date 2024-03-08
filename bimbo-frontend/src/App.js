@@ -7,18 +7,33 @@ import Home from "./pages/Home";
 
 function App() {
   const [show, setShow] = useState(false);
+  const [showAssessment, setShowAssessment] = useState(false);
   return (
     <Router>
       <div className="font-sans">
         {" "}
-        <Navbar show={show} setShow={setShow} />
+        <Navbar
+          show={show}
+          setShow={setShow}
+          showAssessment={showAssessment}
+          setShowAssessment={setShowAssessment}
+        />
       </div>
 
       <div className="font-sans">
         <div>
           <Routes>
             <Route exact path="/" element={<Home />} />
-            <Route exact path="/:page" element={<PageRender />} />
+            <Route
+              exact
+              path="/:page"
+              element={
+                <PageRender
+                  showAssessment={showAssessment}
+                  setShowAssessment={setShowAssessment}
+                />
+              }
+            />
           </Routes>
 
           <Footer />

@@ -1,4 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import pic3 from "../assets/pic3.png";
+import pic7 from "../assets/pic7.png";
 import ScrollToTopOnMount from "../components/ScrollToTopOnMount";
 import home2 from "../assets/home2.png";
 import check from "../assets/check.png";
@@ -10,13 +13,16 @@ import d5 from "../assets/d5.png";
 import d6 from "../assets/d6.png";
 import d7 from "../assets/d7.png";
 import d8 from "../assets/d8.png";
+import small1 from "../assets/small1.png";
+import small2 from "../assets/small2.png";
+import small3 from "../assets/small3.png";
 import { FiArrowUp } from "react-icons/fi";
 
-const Mastery = () => {
+const Mastery = ({ showAssessment, setShowAssessment }) => {
   return (
     <div className="-mt-[70px] pt-[70px]">
       <ScrollToTopOnMount />
-      <div className=" px-[4%] xl:px-[60px] 2xl:px-[12%]">
+      <div className=" px-[4%] xl:px-[60px] 2xl:px-[15%]">
         <div className="xl:flex lg:gap-[48px]">
           <div className="xl:w-[60%]">
             <div className="pt-[48px]">
@@ -30,20 +36,38 @@ const Mastery = () => {
                 communication, active listening, interpersonal skills, and
                 overcoming communication barriers.
               </h4>
-              <div className="flex gap-[12px] mt-[12px]">
-                <h4 className="text-[12px] font-[500] text-text">
-                  Starting May 9
-                </h4>
-                <h4 className="text-[12px] font-[500] text-text">
-                  Duration 6 Weeks
-                </h4>
-                <h4 className="text-[12px] font-[500] text-text">Online</h4>
+              <div className="flex gap-[12px] mt-[12px] overflow-x-auto">
+                <div className="flex items-center gap-[4px]">
+                  <div>
+                    <img className="w-[16px]" src={small1} />
+                  </div>
+                  <h4 className="text-[12px] font-[500] text-text">
+                    Starting May 9
+                  </h4>
+                </div>
+                <div className="flex items-center gap-[4px]">
+                  <div>
+                    <img className="w-[16px]" src={small2} />
+                  </div>
+                  <h4 className="text-[12px] font-[500] text-text">
+                    Duration 6 Weeks
+                  </h4>
+                </div>
+                <div className="flex items-center gap-[4px]">
+                  <div>
+                    <img className="w-[16px]" src={small3} />
+                  </div>
+                  <h4 className="text-[12px] font-[500] text-text">Online</h4>
+                </div>
               </div>
               <div className="grid grid-cols-1 gap-[15px] md:gap-[32px] mt-[30px] md:flex">
                 <button className="w-full py-[12px] px-[20px] text-white rounded-[8px] bg-secondary text-[14px] font-[500] hover:bg-black md:w-fit">
                   Register now
                 </button>
-                <button className="w-full py-[12px] px-[20px] text-secondary rounded-[8px] bg-white text-[14px] font-[500] border-[1px] border-gray-200 hover:bg-gray-100 md:w-fit">
+                <button
+                  onClick={() => setShowAssessment(!showAssessment)}
+                  className="w-full py-[12px] px-[20px] text-secondary rounded-[8px] bg-white text-[14px] font-[500] border-[1px] border-gray-200 hover:bg-gray-100 md:w-fit"
+                >
                   Take an assessment test
                 </button>
               </div>
@@ -56,7 +80,7 @@ const Mastery = () => {
                   <div className="pb-[100%]  relative overflow-hidden  rounded-[24px] ">
                     <img
                       className=" absolute top-0 left-0 w-[100%] h-[100%] object-cover "
-                      src={home2}
+                      src={pic3}
                       alt="Background"
                     />
                   </div>
@@ -305,9 +329,11 @@ const Mastery = () => {
                     Register now
                   </button>
                 </div>
-                <button className="w-full py-[12px] px-[20px] text-white rounded-[8px] bg-secondary text-[14px] font-[500] hover:bg-black mt-[48px]">
-                  View more
-                </button>
+                <Link to="/discovering">
+                  <button className="w-full py-[12px] px-[20px] text-white rounded-[8px] bg-secondary text-[14px] font-[500] hover:bg-black mt-[48px]">
+                    View more
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -322,7 +348,7 @@ const Mastery = () => {
               <div className="pb-[100%] md:pb-[115%]  relative overflow-hidden  rounded-[24px] ">
                 <img
                   className=" absolute top-0 left-0 w-[100%] h-[100%] object-cover "
-                  src={home2}
+                  src={pic7}
                   alt="Background"
                 />
               </div>

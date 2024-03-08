@@ -2,17 +2,17 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import NotFound from "../components/NotFound";
 
-const generatePage = (pageName) => {
+const generatePage = (pageName, props) => {
   const component = () => require(`../pages/${pageName}`).default;
 
   try {
-    return React.createElement(component());
+    return React.createElement(component(), props); // Pass props here
   } catch (err) {
     return <NotFound />;
   }
 };
 
-const PageRender = () => {
+const PageRender = ({ showAssessment, setShowAssessment }) => {
   const { page, id } = useParams();
   let pageName = "";
   if (id) {
@@ -21,7 +21,7 @@ const PageRender = () => {
     pageName = `${page}`;
   }
 
-  return generatePage(pageName);
+  return generatePage(pageName, { showAssessment, setShowAssessment }); // Pass props to generatePage
 };
 
 export default PageRender;

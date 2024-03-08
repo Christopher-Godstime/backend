@@ -202,13 +202,13 @@ const Calendar = () => {
           backdropFilter: "",
         }}
       >
-        <div className="absolute  md:left-[77px] transform -translate-x-1/2 left-1/2 -translate-y-1/2 top-1/2 md:transform-none md:top-[43px]">
+        <div className="absolute xl:left-[15%]  md:left-[77px] transform -translate-x-1/2 left-1/2 -translate-y-1/2 top-1/2 md:transform-none md:top-[43px]">
           <h4 className="text-[36px] font-[500] text-white text-end leading-[44px] whitespace-nowrap">
             Upcoming events
           </h4>
         </div>
       </div>
-      <div className=" py-[48px] px-[4%] xl:px-[60px]">
+      <div className=" py-[48px] px-[4%] 2xl:px-[15%] xl:px-[60px]">
         {schedule.map((drop, i) => (
           <div key={i} className="  ">
             <div
@@ -262,7 +262,7 @@ const Calendar = () => {
           </div>
         ))}
       </div>
-      <div className="py-[48px] px-[4%] xl:px-[60px]">
+      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[15%]">
         <div className="lg:flex gap-[40px]">
           <div className="lg:w-[60%] bg-[#02152E] rounded-[24px] h-[416px] relative">
             <button className="w-[65px] h-[65px] rounded-full border-[1px] border-primary flex justify-center items-center bg-white absolute top-[48px] right-[24px] lg:right-[48px]">

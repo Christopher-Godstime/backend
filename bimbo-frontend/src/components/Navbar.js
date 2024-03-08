@@ -3,8 +3,10 @@ import { NavLink, Link, useHistory, useLocation } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import { MdOutlineClose } from "react-icons/md";
 import logo from "../assets/logo.png";
+import logo4 from "../assets/logo4.png";
+import Assessment from "../pages/Assessment";
 
-const Navbar = ({ show, setShow }) => {
+const Navbar = ({ show, setShow, showAssessment, setShowAssessment }) => {
   const [fix, setFix] = useState(false);
 
   const location = useLocation();
@@ -23,12 +25,13 @@ const Navbar = ({ show, setShow }) => {
 
   useEffect(() => {
     setShow(show);
-    if (show) {
+    setShowAssessment(showAssessment);
+    if (show || showAssessment) {
       document.body.classList.add("overflow-y-hidden");
     } else {
       document.body.classList.remove("overflow-y-hidden");
     }
-  }, [show]);
+  }, [show, showAssessment]);
 
   return (
     <div>
@@ -39,13 +42,17 @@ const Navbar = ({ show, setShow }) => {
             : "sticky z-40"
         }
       >
-        <div className="px-[4%] xl:px-[60px] 2xl:px-[12%] ">
+        <div className="px-[4%] xl:px-[60px] 2xl:px-[15%] ">
           <div className="flex justify-between items-center h-[70px]">
             <div className="flex items-center gap-[20px]">
               <div className="cursor-pointer">
                 <div>
                   <Link to="/">
-                    <img className="w-[76px]" src={logo} />
+                    {fix || isHomePage ? (
+                      <img className="w-[76px]" src={logo} />
+                    ) : (
+                      <img className="w-[76px]" src={logo4} />
+                    )}
                   </Link>
                 </div>
               </div>
@@ -76,7 +83,7 @@ const Navbar = ({ show, setShow }) => {
             show ? "translate-x-0" : "-translate-x-full"
           } ease-in-out duration-500`}
         >
-          <div className="px-[4%] xl:px-[60px] 2xl:px-[12%] flex flex-col h-full">
+          <div className="px-[4%] xl:px-[60px] 2xl:px-[15%] flex flex-col h-full">
             <div className="flex items-center justify-between ">
               <div>
                 <Link to="/">
@@ -117,17 +124,13 @@ const Navbar = ({ show, setShow }) => {
                 </NavLink>
               </h4>
               <h4
-                onClick={() => setShow(!show)}
-                className="text-[16px] font-[500] md:font-[400] text-white"
+                onClick={() => {
+                  setShow(!show);
+                  setShowAssessment(!showAssessment);
+                }}
+                className="text-[16px] font-[500] md:font-[400] text-white cursor-pointer"
               >
-                <NavLink
-                  to="/assessment"
-                  style={({ isActive }) => {
-                    return { color: isActive ? "#F86108" : "white" };
-                  }}
-                >
-                  Take the clarity Assessment
-                </NavLink>
+                Take the clarity Assessment
               </h4>
               <h4
                 onClick={() => setShow(!show)}
@@ -181,7 +184,7 @@ const Navbar = ({ show, setShow }) => {
                   Blog
                 </NavLink>
               </h4>
-              <h4
+              {/* <h4
                 onClick={() => setShow(!show)}
                 className="text-[16px] font-[500] md:font-[400] text-white"
               >
@@ -193,7 +196,7 @@ const Navbar = ({ show, setShow }) => {
                 >
                   Bimbo Messele Academy
                 </NavLink>
-              </h4>
+              </h4> */}
               <h4
                 onClick={() => setShow(!show)}
                 className="text-[16px] font-[500] md:font-[400] text-white"
@@ -231,6 +234,34 @@ const Navbar = ({ show, setShow }) => {
                 </h4>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className={`fixed w-full h-full block ${
+          showAssessment ? "translate-y-0 z-40" : "translate-y-full z-40"
+        } ease-in-out duration-500`}
+        style={{
+          minWidth: showAssessment ? "200px" : "",
+          zIndex: showAssessment ? 50 : "",
+          background: showAssessment ? "black" : "",
+          color: showAssessment ? "white" : "",
+          top: showAssessment ? 0 : 0,
+        }}
+      >
+        <div
+          className={`bottom-0 left-1/2 transform -translate-x-1/2 z-40 absolute overflow-y-hidden  bg-white sm:w-[70%] w-[95%] md:rounded-[24px] rounded-[8px] pt-[18px] h-fit ${
+            showAssessment
+              ? "top-1/2 transform -translate-y-1/2"
+              : "translate-y-full"
+          } ease-in-out duration-500`}
+        >
+          <div className="overflow-y-auto h-[calc(100vh-100px)]">
+            <Assessment
+              showAssessment={showAssessment}
+              setShowAssessment={setShowAssessment}
+            />
           </div>
         </div>
       </div>

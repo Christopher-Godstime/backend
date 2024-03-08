@@ -1,5 +1,6 @@
 import React from "react";
 import home2 from "../assets/home2.png";
+import pic2 from "../assets/pic2.png";
 import ScrollToTopOnMount from "../components/ScrollToTopOnMount";
 import { FiArrowUp } from "react-icons/fi";
 
@@ -7,15 +8,15 @@ const About = () => {
   return (
     <div className="-mt-[70px] pt-[70px]">
       <ScrollToTopOnMount />
-      <div className=" px-[4%] xl:px-[60px] 2xl:px-[12%] ">
+      <div className=" px-[4%] xl:px-[60px] 2xl:px-[15%] ">
         <h4 className="py-[48px] text-[40px] font-[700] lg:text-[60px] lg:font-[600] lg:leading-[72px] leading-[48px] lg:w-[726px] text-[#021732]">
           LEGACY IS GREATER THAN CURRENCY
         </h4>
         <div className="">
-          <div className="md:py-[30%] py-[75%]   relative overflow-hidden mx-auto rounded-[24px] md:rounded-[0px]">
+          <div className="md:py-[30%] py-[75%] relative overflow-hidden mx-auto rounded-[24px] md:rounded-[0px]">
             <img
-              className="rounded-[24px] absolute top-0 left-0 w-[150%] h-[100%] object-cover "
-              src={home2}
+              className="rounded-[24px] absolute top-0 left-0 w-full h-full object-cover "
+              src={pic2}
               alt="Background"
             />
           </div>
