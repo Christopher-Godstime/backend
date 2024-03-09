@@ -21,14 +21,14 @@ const testimonials = [
   {
     id: 1,
     image: test5,
-    text: "Ride the wave of success with Rivala, as it empowers you to gain the upper hand in every endeavor. Unleash the potential of cutting-edge technology and strategic advantages, propelling you confidently towards triumph.",
-    name: "Maryanne Jones",
+    text: "The coaching program was very impactful. Dr. Bimbo was very practical during our sessions, and I was able to connect with her teachings.",
+    name: "Adebayo Adetola",
   },
   {
     id: 2,
     image: test1,
     text: "I am very grateful to Dr. Bimbo for showing me the four levels of consciousness and how the area of my life can be at any of these levels. She taught me how to grow better and I have started practicing some of the lessons learnt during the coaching program which has improved my life.",
-    name: "- Adeniji Adedapo Bolaji",
+    name: "Adeniji Adedapo Bolaji",
   },
   {
     id: 3,
@@ -46,7 +46,7 @@ const testimonials = [
     id: 5,
     image: test4,
     text: "I have learnt about the different levels of consciousness and how to relate it to rate each aspect of my life. The lessons have been very helpful for me as I start my 2024. ",
-    name: "- Obe Adedoyin",
+    name: "Obe Adedoyin",
   },
 ];
 
