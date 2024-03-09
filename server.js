@@ -53,6 +53,9 @@ app.use("/api/email", emailRoute);
 //   .catch((err) => {
 //     console.error("Error connecting to MongoDB:", err);
 //   });
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "./bimbo-frontend/build", "index.html"));
+});
 
 const port = process.env.PORT || 5000;
 http.listen(port, () => {
