@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 function App() {
   const [show, setShow] = useState(false);
   const [showAssessment, setShowAssessment] = useState(false);
+  const [getInTouch, setGetInTouch] = useState(false);
   return (
     <Router>
       <div className="font-sans">
@@ -17,6 +18,8 @@ function App() {
           setShow={setShow}
           showAssessment={showAssessment}
           setShowAssessment={setShowAssessment}
+          getInTouch={getInTouch}
+          setGetInTouch={setGetInTouch}
         />
       </div>
 
@@ -30,6 +33,8 @@ function App() {
                 <Home
                   showAssessment={showAssessment}
                   setShowAssessment={setShowAssessment}
+                  getInTouch={getInTouch}
+                  setGetInTouch={setGetInTouch}
                 />
               }
             />
@@ -40,6 +45,8 @@ function App() {
                 <PageRender
                   showAssessment={showAssessment}
                   setShowAssessment={setShowAssessment}
+                  getInTouch={getInTouch}
+                  setGetInTouch={setGetInTouch}
                 />
               }
             />

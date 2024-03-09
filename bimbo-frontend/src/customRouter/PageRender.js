@@ -12,7 +12,12 @@ const generatePage = (pageName, props) => {
   }
 };
 
-const PageRender = ({ showAssessment, setShowAssessment }) => {
+const PageRender = ({
+  showAssessment,
+  setShowAssessment,
+  getInTouch,
+  setGetInTouch,
+}) => {
   const { page, id } = useParams();
   let pageName = "";
   if (id) {
@@ -21,7 +26,12 @@ const PageRender = ({ showAssessment, setShowAssessment }) => {
     pageName = `${page}`;
   }
 
-  return generatePage(pageName, { showAssessment, setShowAssessment }); // Pass props to generatePage
+  return generatePage(pageName, {
+    showAssessment,
+    setShowAssessment,
+    getInTouch,
+    setGetInTouch,
+  }); // Pass props to generatePage
 };
 
 export default PageRender;

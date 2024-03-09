@@ -50,7 +50,12 @@ const testimonials = [
   },
 ];
 
-const Home = ({ showAssessment, setShowAssessment }) => {
+const Home = ({
+  showAssessment,
+  setShowAssessment,
+  getInTouch,
+  setGetInTouch,
+}) => {
   const [active, setActive] = useState(0);
   const [popup1, setPopup1] = useState(false);
 
@@ -593,10 +598,15 @@ const Home = ({ showAssessment, setShowAssessment }) => {
       <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[15%]">
         <div className="lg:flex gap-[40px]">
           <div className="lg:w-[60%] bg-[#02152E] rounded-[24px] h-[416px] relative">
-            <button className="w-[65px] h-[65px] rounded-full border-[1px] border-primary flex justify-center items-center bg-white absolute top-[48px] right-[24px] lg:right-[48px]">
+            <button
+              onClick={() => {
+                setGetInTouch(!getInTouch);
+              }}
+              className="w-[65px] h-[65px] rounded-full border-[1px] border-primary flex justify-center items-center bg-white absolute top-[48px] right-[24px] lg:right-[48px]"
+            >
               <FiArrowUp className="text-[30px] stroke-[1px] text-primary transform rotate-45" />
             </button>
-            <h4 className="text-white text-[36px] lg:text-[48px] font-[600] leading-[44px] absolute bottom-[48px] left-[24px] lg:left-[48px]">
+            <h4 className="text-white text-[36px] lg:text-[48px] font-[600] leading-[44px] absolute bottom-[48px] left-[24px] lg:left-[48px] pr-[24px] lg:pr-[48px]">
               Schedule a one on one{" "}
             </h4>
           </div>
@@ -605,7 +615,7 @@ const Home = ({ showAssessment, setShowAssessment }) => {
               {" "}
               <FiArrowUp className="text-[30px] stroke-[1px] text-[#021732] transform rotate-45" />
             </button>
-            <h4 className="text-[#040F16] text-[36px] lg:text-[48px] lg:leading-[60px] font-[600] leading-[44px] absolute bottom-[48px] left-[24px] lg:left-[48px]">
+            <h4 className="text-[#040F16] text-[36px] lg:text-[48px] lg:leading-[60px] font-[600] leading-[44px] absolute bottom-[48px] left-[24px] pr-[24px] lg:left-[48px] lg:pr-[48px]">
               Book Bimbo Mesele for an event
             </h4>
           </div>

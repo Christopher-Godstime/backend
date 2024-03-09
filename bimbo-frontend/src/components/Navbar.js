@@ -5,8 +5,16 @@ import { MdOutlineClose } from "react-icons/md";
 import logo from "../assets/logo.png";
 import logo4 from "../assets/logo4.png";
 import Assessment from "../pages/Assessment";
+import GetInTouch from "../pages/GetInTouch";
 
-const Navbar = ({ show, setShow, showAssessment, setShowAssessment }) => {
+const Navbar = ({
+  show,
+  setShow,
+  showAssessment,
+  setShowAssessment,
+  getInTouch,
+  setGetInTouch,
+}) => {
   const [fix, setFix] = useState(false);
 
   const location = useLocation();
@@ -26,12 +34,13 @@ const Navbar = ({ show, setShow, showAssessment, setShowAssessment }) => {
   useEffect(() => {
     setShow(show);
     setShowAssessment(showAssessment);
-    if (show || showAssessment) {
+    setGetInTouch(getInTouch);
+    if (show || showAssessment || getInTouch) {
       document.body.classList.add("overflow-y-hidden");
     } else {
       document.body.classList.remove("overflow-y-hidden");
     }
-  }, [show, showAssessment]);
+  }, [show, showAssessment, getInTouch]);
 
   return (
     <div>
@@ -226,9 +235,11 @@ const Navbar = ({ show, setShow, showAssessment, setShowAssessment }) => {
             </div>
             <div className="mt-auto pt-[40px] pb-[28px]">
               <div className="py-[8px] px-[16px] rounded-[8px]  bg-[#021732]">
-                <h4 className="text-[16px] font-[500] text-primary leading-[24px]">
-                  Coach the Coaches
-                </h4>
+                <Link onClick={() => setShow(!show)} to="/coach-the-coaches">
+                  <button className="text-[16px] font-[500] text-primary leading-[24px]">
+                    Coach the Coaches
+                  </button>
+                </Link>
                 <h4 className="text-[14px] font-[500] text-white leading-[20px]">
                   Coming in October 2024
                 </h4>
@@ -262,6 +273,31 @@ const Navbar = ({ show, setShow, showAssessment, setShowAssessment }) => {
               showAssessment={showAssessment}
               setShowAssessment={setShowAssessment}
             />
+          </div>
+        </div>
+      </div>
+
+      <div
+        className={`fixed w-full h-full block ${
+          getInTouch ? "translate-y-0 z-40" : "translate-y-full z-40"
+        } ease-in-out duration-500`}
+        style={{
+          minWidth: getInTouch ? "200px" : "",
+          zIndex: getInTouch ? 50 : "",
+          background: getInTouch ? "black" : "",
+          color: getInTouch ? "white" : "",
+          top: getInTouch ? 0 : 0,
+        }}
+      >
+        <div
+          className={`bottom-0 left-1/2 transform -translate-x-1/2 z-40 absolute overflow-y-hidden  bg-white md:w-[542px] sm:w-[70%] w-[95%] md:rounded-[20px] rounded-[8px] pt-[18px] h-fit ${
+            getInTouch
+              ? "top-1/2 transform -translate-y-1/2"
+              : "translate-y-full"
+          } ease-in-out duration-500`}
+        >
+          <div className="overflow-y-auto h-[calc(100vh-100px)]">
+            <GetInTouch getInTouch={getInTouch} setGetInTouch={setGetInTouch} />
           </div>
         </div>
       </div>

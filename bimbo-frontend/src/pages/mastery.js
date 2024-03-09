@@ -18,7 +18,12 @@ import small2 from "../assets/small2.png";
 import small3 from "../assets/small3.png";
 import { FiArrowUp } from "react-icons/fi";
 
-const Mastery = ({ showAssessment, setShowAssessment }) => {
+const Mastery = ({
+  showAssessment,
+  setShowAssessment,
+  getInTouch,
+  setGetInTouch,
+}) => {
   return (
     <div className="-mt-[70px] pt-[70px]">
       <ScrollToTopOnMount />
@@ -372,10 +377,15 @@ const Mastery = ({ showAssessment, setShowAssessment }) => {
         <div className="py-[48px] ">
           <div className="lg:flex gap-[40px]">
             <div className="lg:w-[60%] bg-[#02152E] rounded-[24px] h-[416px] relative">
-              <button className="w-[65px] h-[65px] rounded-full border-[1px] border-primary flex justify-center items-center bg-white absolute top-[48px] right-[24px] lg:right-[48px]">
+              <button
+                onClick={() => {
+                  setGetInTouch(!getInTouch);
+                }}
+                className="w-[65px] h-[65px] rounded-full border-[1px] border-primary flex justify-center items-center bg-white absolute top-[48px] right-[24px] lg:right-[48px]"
+              >
                 <FiArrowUp className="text-[30px] stroke-[1px] text-primary transform rotate-45" />
               </button>
-              <h4 className="text-white text-[36px] lg:text-[48px] font-[600] leading-[44px] absolute bottom-[48px] left-[24px] lg:left-[48px]">
+              <h4 className="text-white text-[36px] lg:text-[48px] font-[600] leading-[44px] absolute bottom-[48px] left-[24px] lg:left-[48px] pr-[24px] lg:pr-[48px]">
                 Schedule a one on one{" "}
               </h4>
             </div>
@@ -384,7 +394,7 @@ const Mastery = ({ showAssessment, setShowAssessment }) => {
                 {" "}
                 <FiArrowUp className="text-[30px] stroke-[1px] text-[#021732] transform rotate-45" />
               </button>
-              <h4 className="text-[#040F16] text-[36px] lg:text-[48px] lg:leading-[60px] font-[600] leading-[44px] absolute bottom-[48px] left-[24px] lg:left-[48px]">
+              <h4 className="text-[#040F16] text-[36px] lg:text-[48px] lg:leading-[60px] font-[600] leading-[44px] absolute bottom-[48px] left-[24px] pr-[24px] lg:left-[48px] lg:pr-[48px]">
                 Book Bimbo Mesele for an event
               </h4>
             </div>

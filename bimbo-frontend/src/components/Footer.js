@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import caretaker from "../assets/caretaker.png";
+import logo from "../assets/logo.png";
 import facebook from "../assets/facebook.png";
 import linkedin from "../assets/linkedin.png";
 import x from "../assets/x.png";
@@ -11,7 +11,7 @@ const Footer = () => {
     <div>
       <div className="py-[40px] px-[4%] xl:px-[60px] 2xl:px-[15%] bg-[#010A15]">
         <div>
-          <img className="w-[138px]" src={caretaker} />
+          <img className="w-[100px]" src={logo} />
         </div>
         <div className="md:flex justify-between text-white mt-[24px]">
           <div className="order-2 grid grid-cols-4 gap-[30px] w-fit">
@@ -61,7 +61,7 @@ const Footer = () => {
           </div>
           <div className="order-1 py-[24px] border-t-[1px] border-gray-800 md:py-[0px] md:border-[0px]">
             <h4 className="text-[14px] font-[500] leading-[20px] text-white">
-              Caretaker 2024 &copy; All rights reserved
+              2024 &copy; All rights reserved
             </h4>
           </div>
         </div>
