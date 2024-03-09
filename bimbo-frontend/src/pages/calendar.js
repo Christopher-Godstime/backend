@@ -189,7 +189,7 @@ const Calendar = ({ getInTouch, setGetInTouch }) => {
       ],
     },
   ];
-  console.log(schedule);
+
   return (
     <div className="-mt-[70px] pt-[70px]">
       {" "}

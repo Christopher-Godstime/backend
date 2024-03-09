@@ -339,7 +339,7 @@ const ContactForm = ({ getInTouch, setGetInTouch }) => {
 const GetInTouch = ({ getInTouch, setGetInTouch }) => {
   return (
     <div className="">
-      <div className="py-[24px] px-[4%] xl:px-[24px] 2xl:px-[15%]">
+      <div className="py-[24px] px-[4%] xl:px-[24px] ">
         <ContactForm getInTouch={getInTouch} setGetInTouch={setGetInTouch} />
       </div>
     </div>

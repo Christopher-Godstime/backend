@@ -290,13 +290,13 @@ const Navbar = ({
         }}
       >
         <div
-          className={`bottom-0 left-1/2 transform -translate-x-1/2 z-40 absolute overflow-y-hidden  bg-white md:w-[542px] sm:w-[70%] w-[95%] md:rounded-[20px] rounded-[8px] pt-[18px] h-fit ${
+          className={`bottom-0 left-1/2 transform -translate-x-1/2 z-40 absolute overflow-y-hidden  bg-white md:w-[542px] sm:w-[70%] w-[95%] md:rounded-[20px] rounded-[8px]  h-fit ${
             getInTouch
               ? "top-1/2 transform -translate-y-1/2"
               : "translate-y-full"
           } ease-in-out duration-500`}
         >
-          <div className="overflow-y-auto h-[calc(100vh-100px)]">
+          <div className="overflow-y-auto h-[calc(100vh-200px)]">
             <GetInTouch getInTouch={getInTouch} setGetInTouch={setGetInTouch} />
           </div>
         </div>
