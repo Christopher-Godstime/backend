@@ -1,0 +1,3 @@
+[[statics]]
+route = "/"
+directory = "bimbo-coaching/bimbo-frontend/build"
