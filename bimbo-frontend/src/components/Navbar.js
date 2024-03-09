@@ -296,7 +296,7 @@ const Navbar = ({
               : "translate-y-full"
           } ease-in-out duration-500`}
         >
-          <div className="overflow-y-auto h-[calc(100vh-200px)]">
+          <div className="overflow-y-auto h-[calc(100vh-100px)]">
             <GetInTouch getInTouch={getInTouch} setGetInTouch={setGetInTouch} />
           </div>
         </div>
