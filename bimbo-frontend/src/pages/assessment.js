@@ -116,8 +116,6 @@ const Assessment = ({ showAssessment, setShowAssessment }) => {
   const handleSelectPhone = (phone) => {
     setSelectedPhone(phone);
   };
-  console.log(`${selectedCountry.name.common}`);
-  console.log(`${selectedPhone.idd.root}${selectedPhone.idd.suffixes[0]}`);
 
   const initialState = {
     firstName: "",
@@ -189,10 +187,6 @@ const Assessment = ({ showAssessment, setShowAssessment }) => {
     if (currentSectionErrors.length === 0) {
       sendAssessment();
     }
-    console.log(formData);
-    console.log(
-      `${selectedPhone.idd.root}${selectedPhone.idd.suffixes[0]}${formData.phoneNumber}`
-    );
   };
 
   const handleNext = () => {
@@ -248,8 +242,6 @@ const Assessment = ({ showAssessment, setShowAssessment }) => {
       [name]: value,
     });
   };
-
-  console.log(formData);
 
   useEffect(() => {
     setSending(sending);
@@ -433,7 +425,7 @@ const Assessment = ({ showAssessment, setShowAssessment }) => {
                               ? "py-[10px] px-[14px] rounded-[8px] border-[1px] border-red-500 mt-[8px] focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full"
                               : "py-[10px] px-[14px] rounded-[8px] border-[1px] border-gray-200 mt-[8px] focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full"
                           }
-                          placeholder="Enter fist name"
+                          placeholder="Enter first name"
                         />
                         {formError.firstName && (
                           <h4 className="text-[12px] text-red-500 mt-[2px]">

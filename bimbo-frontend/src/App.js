@@ -23,7 +23,16 @@ function App() {
       <div className="font-sans">
         <div>
           <Routes>
-            <Route exact path="/" element={<Home />} />
+            <Route
+              exact
+              path="/"
+              element={
+                <Home
+                  showAssessment={showAssessment}
+                  setShowAssessment={setShowAssessment}
+                />
+              }
+            />
             <Route
               exact
               path="/:page"

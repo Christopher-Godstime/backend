@@ -14,6 +14,7 @@ import test5 from "../assets/test5.png";
 import quote from "../assets/quote.png";
 import angle from "../assets/angle.png";
 import ScrollToTopOnMount from "../components/ScrollToTopOnMount";
+import { MdOutlineClose } from "react-icons/md";
 import { FiArrowUp } from "react-icons/fi";
 
 const testimonials = [
@@ -49,8 +50,60 @@ const testimonials = [
   },
 ];
 
-const Home = () => {
+const Home = ({ showAssessment, setShowAssessment }) => {
   const [active, setActive] = useState(0);
+  const [popup1, setPopup1] = useState(false);
+
+  function handleScroll1() {
+    const scrollPosition = window.scrollY;
+    const tolerance = 10;
+    if (
+      scrollPosition >= 2000 - tolerance &&
+      scrollPosition <= 2000 + tolerance
+    ) {
+      setPopup1(true);
+      window.removeEventListener("scroll", handleScroll1);
+    }
+  }
+
+  // const [popup2, setPopup2] = useState(false);
+
+  // function handleScroll2() {
+  //   const scrollPosition = window.scrollY;
+  //   const tolerance = 10;
+  //   if (
+  //     scrollPosition >= 3000 - tolerance &&
+  //     scrollPosition <= 3000 + tolerance
+  //   ) {
+  //     setPopup2(true);
+  //     window.removeEventListener("scroll", handleScroll2);
+  //   }
+  // }
+
+  // const [popup3, setPopup3] = useState(false);
+
+  // function handleScroll3() {
+  //   const scrollPosition = window.scrollY;
+  //   const tolerance = 10;
+  //   if (
+  //     scrollPosition >= 5000 - tolerance &&
+  //     scrollPosition <= 5000 + tolerance
+  //   ) {
+  //     setPopup3(true);
+  //     window.removeEventListener("scroll", handleScroll3);
+  //   }
+  // }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll1);
+    // window.addEventListener("scroll", handleScroll2);
+    // window.addEventListener("scroll", handleScroll3);
+    return () => {
+      window.removeEventListener("scroll", handleScroll1);
+      // window.removeEventListener("scroll", handleScroll2);
+      // window.removeEventListener("scroll", handleScroll3);
+    };
+  }, []);
   const Menus = [
     {
       name: "Vision",
@@ -96,6 +149,18 @@ const Home = () => {
 
     setSlideOffset(-offset);
   }, [selectedTestimonial, testimonials]);
+
+  useEffect(() => {
+    // setPopup1(popup1);
+    // setPopup2(popup2);
+    // setPopup2(popup3);
+    setShowAssessment(showAssessment);
+    if (popup1 || showAssessment) {
+      document.body.classList.add("overflow-y-hidden");
+    } else {
+      document.body.classList.remove("overflow-y-hidden");
+    }
+  }, [popup1, showAssessment]);
 
   return (
     <div>
@@ -226,7 +291,12 @@ const Home = () => {
               topics to help individuals enhance their personal and professional
               growth.
             </h4>
-            <button className="w-full md:w-[300px] md:mx-auto py-[12px] px-[20px] rounded-[8px]  bg-primary text-white text-[16px] font-[500] hover:bg-orange-600">
+            <button
+              onClick={() => {
+                setShowAssessment(!showAssessment);
+              }}
+              className="w-full md:w-[300px] md:mx-auto py-[12px] px-[20px] rounded-[8px]  bg-primary text-white text-[16px] font-[500] hover:bg-orange-600"
+            >
               Take the clarity assessment test
             </button>
           </div>
@@ -541,6 +611,135 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {popup1 === true ? (
+        <div
+          className="fixed message w-full h-full"
+          style={{
+            background: "#0008",
+            color: "white",
+            top: 0,
+            left: 0,
+            zIndex: 50,
+          }}
+        >
+          <div className="md:w-[806px] w-[95%]   bg-[#FEEFE6]  rounded-[16px] py-[24px] ">
+            <div
+              onClick={() => setPopup1(!popup1)}
+              className="flex justify-end md:mx-[3%] mx-[24px]"
+            >
+              <MdOutlineClose className="text-black text-[25px] cursor-pointer" />
+            </div>
+            <h4 className="text-[30px] leading-[38px] md:text-[36px] font-[600] text-secondary mt-[40px] text-center mx-[24px] md:leading-[44px]">
+              Not sure what phase you are in your life's journey or how to
+              navigate this season to the next?
+            </h4>
+            <h4 className="text-[16px] leading-[24px] md:text-[18px] font-[500] text-[#556476] mt-[20px] text-center mx-[24px] md:mx-[45px] md:leading-[28px]">
+              Want to break the cycle of limiting beliefs or break the glass
+              ceiling over you? Let's show you how. Begin by taking the Clarity
+              Assessment.
+            </h4>
+            <div className="flex justify-center  mt-[20px] md:mx-[8%] mx-[6%] mb-[60px]">
+              <button
+                onClick={() => {
+                  setPopup1(!popup1);
+                  setShowAssessment(!showAssessment);
+                }}
+                className="bg-primary hover:bg-orange-600 text-white px-[18px] py-[10px] rounded-[8px] text-[16px] font-[500]  w-full md:w-[350px] mx-auto"
+              >
+                Take the clarity assessment test
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <></>
+      )}
+
+      {/* {popup2 === true ? (
+        <div
+          className="fixed message w-full h-full"
+          style={{
+            background: "#0008",
+            color: "white",
+            top: 0,
+            left: 0,
+            zIndex: 50,
+          }}
+        >
+          <div className="md:w-[806px] w-[95%]   bg-[#FFF8E6]  rounded-[16px] py-[24px] ">
+            <div
+              onClick={() => setPopup2(!popup2)}
+              className="flex justify-end md:mx-[3%] mx-[24px]"
+            >
+              <MdOutlineClose className="text-black text-[25px] cursor-pointer" />
+            </div>
+            <h4 className="text-[30px] leading-[38px] md:text-[36px] font-[600] text-secondary mt-[40px] text-center mx-[24px] md:leading-[44px]">
+              Not happy about the outcomes you are getting and want to change
+              them?
+            </h4>
+            <h4 className="text-[16px] leading-[24px] md:text-[18px] font-[500] text-[#556476] mt-[20px] text-center mx-[24px] md:mx-[45px] md:leading-[28px]">
+              Not clear about your purpose and want to change that narrative?
+              Let's show you how. Begin by taking the Clarity Assessment.
+            </h4>
+            <div className="flex justify-center  mt-[20px] md:mx-[8%] mx-[6%] mb-[60px]">
+              <button
+                onClick={() => {
+                  setPopup2(!popup2);
+                  setShowAssessment(!showAssessment);
+                }}
+                className="bg-primary hover:bg-orange-600 text-white px-[18px] py-[10px] rounded-[8px] text-[16px] font-[500]  w-full md:w-[350px] mx-auto"
+              >
+                Take the clarity assessment test
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <></>
+      )} */}
+
+      {/* {popup3 === true ? (
+        <div
+          className="fixed message w-full h-full"
+          style={{
+            background: "#0008",
+            color: "white",
+            top: 0,
+            left: 0,
+            zIndex: 50,
+          }}
+        >
+          <div className="md:w-[806px] w-[95%]   bg-[#EDF3EA]  rounded-[16px] py-[24px] ">
+            <div
+              onClick={() => setPopup3(!popup3)}
+              className="flex justify-end md:mx-[3%] mx-[24px]"
+            >
+              <MdOutlineClose className="text-black text-[25px] cursor-pointer" />
+            </div>
+            <h4 className="text-[30px] leading-[38px] md:text-[36px] font-[600] text-secondary mt-[40px] text-center mx-[24px] md:leading-[44px]">
+              Want to take over the steering wheel and chart your course towards
+              success and significance but don't know how?
+            </h4>
+            <h4 className="text-[16px] leading-[24px] md:text-[18px] font-[500] text-[#556476] mt-[20px] text-center mx-[24px] md:mx-[45px] md:leading-[28px]">
+              Let's show you how. Begin by taking the Clarity Assessment
+            </h4>
+            <div className="flex justify-center  mt-[20px] md:mx-[8%] mx-[6%] mb-[60px]">
+              <button
+                onClick={() => {
+                  setPopup3(!popup3);
+                  setShowAssessment(!showAssessment);
+                }}
+                className="bg-primary hover:bg-orange-600 text-white px-[18px] py-[10px] rounded-[8px] text-[16px] font-[500]  w-full md:w-[350px] mx-auto "
+              >
+                Take the clarity assessment test
+              </button>
+            </div>
+          </div>
+        </div>
+      ) : (
+        <></>
+      )} */}
     </div>
   );
 };
