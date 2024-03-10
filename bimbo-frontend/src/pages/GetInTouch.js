@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { MdOutlineMail } from "react-icons/md";
-import ScrollToTopOnMount from "../components/ScrollToTopOnMount";
+
 import { FiChevronDown } from "react-icons/fi";
 import { useForm, ValidationError } from "@formspree/react";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
 import { MdOutlineClose } from "react-icons/md";
-import c1 from "../assets/c1.png";
-import c2 from "../assets/c2.png";
-import c3 from "../assets/c3.png";
-import c4 from "../assets/c4.png";
+
 import logo1 from "../assets/logo1.png";
 
 const ContactForm = ({ getInTouch, setGetInTouch }) => {
@@ -153,7 +149,7 @@ const ContactForm = ({ getInTouch, setGetInTouch }) => {
                 className="hidden"
                 name="subject"
                 type="hidden"
-                value="Bimbo Mesele Coaching Company Contact Us Form"
+                value="Get in touch with me"
               />
               <div>
                 <h4 className="text-[14px] font-[500] ">

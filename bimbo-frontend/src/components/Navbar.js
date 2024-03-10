@@ -20,9 +20,13 @@ const Navbar = ({
   const location = useLocation();
 
   const isHomePage = location.pathname === "/";
+  const isDiscovering = location.pathname === "/discovering-form";
+  const isMastery = location.pathname === "/mastery-form";
+  const isExecutive = location.pathname === "/executive-form";
+  const isTraining = location.pathname === "/training-form";
 
   function setFixed() {
-    if (window.scrollY >= 200) {
+    if (window.scrollY >= 400) {
       setFix(true);
     } else {
       setFix(false);
@@ -57,7 +61,12 @@ const Navbar = ({
               <div className="cursor-pointer">
                 <div>
                   <Link to="/">
-                    {fix || isHomePage ? (
+                    {fix ||
+                    isHomePage ||
+                    isDiscovering ||
+                    isMastery ||
+                    isExecutive ||
+                    isTraining ? (
                       <img className="w-[76px]" src={logo} />
                     ) : (
                       <img className="w-[76px]" src={logo4} />
@@ -68,7 +77,14 @@ const Navbar = ({
               <FiMenu
                 onClick={() => setShow(!show)}
                 className={`text-[30px] cursor-pointer ${
-                  isHomePage || fix ? "text-white" : "text-black"
+                  isHomePage ||
+                  fix ||
+                  isDiscovering ||
+                  isMastery ||
+                  isExecutive ||
+                  isTraining
+                    ? "text-white"
+                    : "text-black"
                 }`}
               />
             </div>
