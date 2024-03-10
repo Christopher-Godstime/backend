@@ -68,9 +68,11 @@ const Training = ({
                 </div>
               </div>
               <div className="grid grid-cols-1 gap-[15px] md:gap-[32px] mt-[30px] md:flex">
-                <button className="w-full py-[12px] px-[20px] text-white rounded-[8px] bg-secondary text-[14px] font-[500] hover:bg-black md:w-fit">
-                  Register now
-                </button>
+                <Link to="/training-form">
+                  <button className="w-full py-[12px] px-[20px] text-white rounded-[8px] bg-secondary text-[14px] font-[500] hover:bg-black md:w-fit">
+                    Register now
+                  </button>
+                </Link>
                 <button
                   onClick={() => setShowAssessment(!showAssessment)}
                   className="w-full py-[12px] px-[20px] text-secondary rounded-[8px] bg-white text-[14px] font-[500] border-[1px] border-gray-200 hover:bg-gray-100 md:w-fit"
@@ -297,9 +299,11 @@ const Training = ({
                     </h4>
                     <h4 className="text-text ">Last day to book: Feb 6</h4>
                   </div>
-                  <button className=" py-[10px] px-[18px] text-secondary rounded-[8px] bg-white text-[14px] font-[500] border-[1px] border-gray-200 hover:bg-gray-100 md:w-fit">
-                    Register now
-                  </button>
+                  <Link to="/discovering-form">
+                    <button className=" py-[10px] px-[18px] text-secondary rounded-[8px] bg-white text-[14px] font-[500] border-[1px] border-gray-200 hover:bg-gray-100 md:w-fit">
+                      Register now
+                    </button>
+                  </Link>
                 </div>{" "}
                 <Link to="/discovering">
                   <button className="w-full py-[12px] px-[20px] text-white rounded-[8px] bg-secondary text-[14px] font-[500] hover:bg-black mt-[48px]">

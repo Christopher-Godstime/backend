@@ -18,6 +18,7 @@
       padding-bottom: 20px;
       padding-left: 10px;
       padding-right: 10px;
+      color: black;
     }
     .logo {
       width: 51px;
@@ -49,7 +50,6 @@
       font-size: 14px;
       font-weight: 700;
       line-height: 20px;
-      margin-top: 20px;
     }
     .link {
       color: orange;
@@ -66,13 +66,8 @@
     .socialIcon {
       width: 24px;
     }
-    .or {
-      margin-top: 20px;
-      font-weight: 300;
-      font-size: 16px;
-    }
-    body #ss {
-      margin-right: 12px;
+    a {
+      text-decoration: none;
     }
   </style>
   <body style="font-family: 'Work Sans', sans-serif">
@@ -83,8 +78,10 @@
           src="<%- base_url %>/assets/mail/logo4.png"
         />
       </div>
-      <h4 class="heading">Your Clarity Assessment overall score is 45%</h4>
-      <h4 class="hello">Hello <span class="name"> Bimbo</span>,</h4>
+      <h4 class="heading">
+        Your Clarity Assessment overall score is <%- score %>%
+      </h4>
+      <h4 class="hello">Hello <span class="name"> <%- first_name %></span>,</h4>
       <h4 class="text">
         Clarity is in phases, and no matter the phase you are in, your clarity
         can deepen so that you can achieve better outcomes and we are ready to
@@ -103,27 +100,17 @@
         talents, and pursue paths aligned with your authentic self. The courses
         in this package include removing blocks to your clarity,
         discovering/unleashing a new version of you, leadership, and
-        accountability. To sign up, <span class="link"> click here. </span>
-      </h4>
-      <h4 class="or">OR</h4>
-      <h4 class="heading2">Gaining Mastery</h4>
-      <h4 class="text">
-        This coaching package empowers you to make significant contributions,
-        drive innovation, and pursue your passions with precision and
-        effectiveness, leading to personal fulfillment, professional success,
-        and significance. The courses in this package include Getting Unstuck,
-        Increasing Productivity, Embarking on A New Journey/Project, and
-        Thriving. To sign up, <span class="link"> click here. </span>
+        accountability. To sign up,
+        <a href="<%- base_url %>/discovering-form" target="_blank">
+          <span class="link"> click here. </span>
+        </a>
       </h4>
       <h4 class="text">We look forward to welcoming you!</h4>
       <h4 class="text">
         Keep transforming,<br />The Bimbo Mesele Coaching Team
       </h4>
       <div class="footer">
-        <div>
-          <img class="logo" src="<%- base_url %>/assets/mail/logo4.png" />
-        </div>
-        <div id="ss" class="social">
+        <div class="social">
           <div>
             <img
               class="socialIcon"
