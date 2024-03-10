@@ -551,7 +551,153 @@ const ContactForm = ({ bookAnEvent, setBookAnEvent }) => {
           <div className="w-full">
             {page !== formData.length - 0 && (
               <div className="w-full flex justify-end">
-                {page === formTiles.length - 1 && <></>}
+                {page === formTiles.length - 1 && (
+                  <div className="text-black ">
+                    <form onSubmit={handleSubmit}>
+                      <div className="hidden">
+                        <div className="mt-[48px] grid grid-cols-1 gap-[17px]">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-[17px]">
+                            <input
+                              className="hidden"
+                              name="subject"
+                              type="hidden"
+                              value="Book an event"
+                            />
+                            <div>
+                              <h4 className="text-[14px] font-[500] ">
+                                First Name{" "}
+                                <span className="text-primary">*</span>
+                              </h4>
+                              <input
+                                className="py-[10px] px-[14px] rounded-[8px] border-[1px] border-gray-200 mt-[8px] focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full hidden"
+                                type="text"
+                                name="First Name"
+                                value={formData.firstName}
+                              />
+                            </div>
+                            <div>
+                              <h4 className="text-[14px] font-[500] ">
+                                Last Name{" "}
+                                <span className="text-primary">*</span>
+                              </h4>
+                              <input
+                                className="py-[10px] px-[14px] rounded-[8px] border-[1px] border-gray-200 mt-[8px] focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full hidden"
+                                type="text"
+                                name="Last Name"
+                                value={formData.lastName}
+                              />
+                            </div>
+                          </div>
+                          <div className="">
+                            <div>
+                              <h4 className="text-[14px] font-[500] ">
+                                Phone number
+                              </h4>
+                              <input
+                                type="hidden"
+                                name="Country Code"
+                                value={`${selectedPhone.idd.root}${selectedPhone.idd.suffixes?.[0]}`}
+                              />
+                            </div>
+                          </div>
+                          <div>
+                            <h4 className="text-[14px] font-[500] ">
+                              Phone number
+                            </h4>
+                            <input
+                              className="py-[10px] px-[14px] rounded-[8px] border-[1px] border-gray-200 mt-[8px] focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full hidden"
+                              type="text"
+                              name="Phone Number"
+                              value={formData.phoneNumber}
+                            />
+                          </div>
+                          <div>
+                            <h4 className="text-[14px] font-[500] ">
+                              Location
+                            </h4>
+                            <input
+                              type="hidden"
+                              name="Country Name"
+                              value={selectedCountry.name.common}
+                            />
+                          </div>
+                          <div className="w-full">
+                            <h4 className="text-[14px] font-[500] ">
+                              Email Address{" "}
+                              <span className="text-primary">*</span>
+                            </h4>
+
+                            <input
+                              className="py-[10px] px-[14px] rounded-[8px] border-[1px] border-gray-200 mt-[8px] focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full hidden"
+                              type="email"
+                              name="Email"
+                              value={formData.email}
+                            />
+                          </div>
+                        </div>
+
+                        <div className="mt-[48px] grid grid-cols-1 gap-[17px]">
+                          <div>
+                            <h4 className="text-[14px] font-[500] ">
+                              Event Name
+                            </h4>
+                            <input
+                              className="py-[10px] px-[14px] rounded-[8px] border-[1px] border-gray-200 mt-[8px] focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full hidden"
+                              placeholder="Enter Event name"
+                              type="text"
+                              name="Event Name"
+                              value={formData.eventName}
+                            />
+                          </div>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-[17px]">
+                            <div>
+                              <h4 className="text-[14px] font-[500] ">
+                                Date of event
+                              </h4>
+                              <input
+                                className="py-[10px] px-[14px] rounded-[8px] border-[1px] border-gray-200 mt-[8px] focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full hidden"
+                                type="text"
+                                name="Date"
+                                value={selectedDate}
+                              />
+                            </div>
+                            <div>
+                              <h4 className="text-[14px] font-[500] ">
+                                Duration
+                              </h4>
+                              <input
+                                className="py-[10px] px-[14px] rounded-[8px] border-[1px] border-gray-200 mt-[8px] focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full hidden"
+                                type="text"
+                                name="Duration"
+                                value={formData.duration}
+                              />
+                            </div>
+                          </div>
+
+                          <div className="">
+                            <h4 className="text-[14px] font-[500] ">
+                              Overview
+                            </h4>
+                            <textarea
+                              placeholder="Enter a description..."
+                              className=" w-full mt-[8px]  text-[12px] md:text-[16px] border-[1px] border-gray-200 px-[16px] py-[12px]  rounded-[8px] hidden"
+                              rows="5"
+                              value={formData.overview}
+                              name="Overview"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <button
+                        disabled={state.submitting}
+                        className="text-white bg-secondary hover:bg-black px-[20px] py-[10px] rounded-[8px] font-[500] md:w-[165px] w-full ml-auto"
+                      >
+                        Submit
+                      </button>
+                    </form>
+                  </div>
+                )}
                 {page !== formTiles.length - 1 && (
                   <buttton
                     onClick={handleNext}
@@ -591,130 +737,6 @@ const ContactForm = ({ bookAnEvent, setBookAnEvent }) => {
             </div>
           </div>
         )}
-      </div>
-
-      <div className="text-black ">
-        <form onSubmit={handleSubmit}>
-          <div className="hidden">
-            <div className="mt-[48px] grid grid-cols-1 gap-[17px]">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-[17px]">
-                <input
-                  className="hidden"
-                  name="subject"
-                  type="hidden"
-                  value="Book an event"
-                />
-                <div>
-                  <h4 className="text-[14px] font-[500] ">
-                    First Name <span className="text-primary">*</span>
-                  </h4>
-                  <input
-                    className="py-[10px] px-[14px] rounded-[8px] border-[1px] border-gray-200 mt-[8px] focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full hidden"
-                    type="text"
-                    name="First Name"
-                    value={formData.firstName}
-                  />
-                </div>
-                <div>
-                  <h4 className="text-[14px] font-[500] ">
-                    Last Name <span className="text-primary">*</span>
-                  </h4>
-                  <input
-                    className="py-[10px] px-[14px] rounded-[8px] border-[1px] border-gray-200 mt-[8px] focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full hidden"
-                    type="text"
-                    name="Last Name"
-                    value={formData.lastName}
-                  />
-                </div>
-              </div>
-              <div className="">
-                <div>
-                  <h4 className="text-[14px] font-[500] ">Phone number</h4>
-                  <input
-                    type="hidden"
-                    name="Country Code"
-                    value={`${selectedPhone.idd.root}${selectedPhone.idd.suffixes?.[0]}`}
-                  />
-                </div>
-              </div>
-              <div>
-                <h4 className="text-[14px] font-[500] ">Location</h4>
-                <input
-                  type="hidden"
-                  name="Country Name"
-                  value={selectedCountry.name.common}
-                />
-              </div>
-              <div className="w-full">
-                <h4 className="text-[14px] font-[500] ">
-                  Email Address <span className="text-primary">*</span>
-                </h4>
-
-                <input
-                  className="py-[10px] px-[14px] rounded-[8px] border-[1px] border-gray-200 mt-[8px] focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full hidden"
-                  type="email"
-                  name="Email"
-                  value={formData.email}
-                />
-              </div>
-            </div>
-
-            <div className="mt-[48px] grid grid-cols-1 gap-[17px]">
-              <div>
-                <h4 className="text-[14px] font-[500] ">Event Name</h4>
-                <input
-                  className="py-[10px] px-[14px] rounded-[8px] border-[1px] border-gray-200 mt-[8px] focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full hidden"
-                  placeholder="Enter Event name"
-                  type="text"
-                  name="Event Name"
-                  value={formData.eventName}
-                />
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-[17px]">
-                <div>
-                  <h4 className="text-[14px] font-[500] ">Date of event</h4>
-                  <input
-                    className="py-[10px] px-[14px] rounded-[8px] border-[1px] border-gray-200 mt-[8px] focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full hidden"
-                    type="text"
-                    name="Date"
-                    value={selectedDate}
-                  />
-                </div>
-                <div>
-                  <h4 className="text-[14px] font-[500] ">Duration</h4>
-                  <input
-                    className="py-[10px] px-[14px] rounded-[8px] border-[1px] border-gray-200 mt-[8px] focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full hidden"
-                    type="text"
-                    name="Duration"
-                    value={formData.duration}
-                  />
-                </div>
-              </div>
-
-              <div className="">
-                <h4 className="text-[14px] font-[500] ">Overview</h4>
-                <textarea
-                  placeholder="Enter a description..."
-                  className=" w-full mt-[8px]  text-[12px] md:text-[16px] border-[1px] border-gray-200 px-[16px] py-[12px]  rounded-[8px] hidden"
-                  rows="5"
-                  value={formData.overview}
-                  name="Overview"
-                />
-              </div>
-            </div>
-          </div>
-
-          {page === 1 && (
-            <div className="absolute right-[4%] xl:right-[24px] bottom-[110px]">
-              <button
-                disabled={state.submitting}
-                className="text-white bg-secondary hover:bg-black px-[20px] py-[10px] rounded-[8px] font-[500] md:w-[165px] w-full ml-auto"
-              >
-                Submit
-              </button>
-            </div>
-          )}
-        </form>
       </div>
     </div>
   );
