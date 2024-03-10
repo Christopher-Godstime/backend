@@ -159,7 +159,7 @@ const ContactForm = ({ getInTouch, setGetInTouch }) => {
                   className="py-[10px] px-[14px] rounded-[8px] border-[1px] border-gray-200 mt-[8px] focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full"
                   placeholder="Enter first name"
                   type="text"
-                  name="firstName"
+                  name="First Name"
                   id="firstName"
                   Required
                 />
@@ -172,7 +172,7 @@ const ContactForm = ({ getInTouch, setGetInTouch }) => {
                   className="py-[10px] px-[14px] rounded-[8px] border-[1px] border-gray-200 mt-[8px] focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full"
                   placeholder="Enter last name"
                   type="text"
-                  name="lastName"
+                  name="Last Name"
                   id="lastName"
                   Required
                 />
@@ -183,7 +183,7 @@ const ContactForm = ({ getInTouch, setGetInTouch }) => {
                 <h4 className="text-[14px] font-[500] ">Phone number</h4>
                 <input
                   type="hidden"
-                  name="countryCode"
+                  name="Country Code"
                   value={`${selectedPhone.idd.root}${selectedPhone.idd.suffixes?.[0]}`}
                 />
                 <div className="border-[1px] border-gray-200 rounded-[8px] mt-[8px] flex items-center">
@@ -221,7 +221,7 @@ const ContactForm = ({ getInTouch, setGetInTouch }) => {
                     className="py-[10px] px-[14px] rounded-r-[8px]   focus:outline-none  focus:border-orange-300  focus:border-[1px] w-full"
                     placeholder="9029439392"
                     type="telephone"
-                    name="telephone"
+                    name="Telephone"
                     id="telephone"
                     required
                   />
@@ -232,7 +232,7 @@ const ContactForm = ({ getInTouch, setGetInTouch }) => {
               <h4 className="text-[14px] font-[500] ">Location</h4>
               <input
                 type="hidden"
-                name="countryName"
+                name="Country Name"
                 value={selectedCountry.name.common}
               />
               <div
@@ -277,7 +277,7 @@ const ContactForm = ({ getInTouch, setGetInTouch }) => {
                 placeholder="Enter email address"
                 id="email"
                 type="email"
-                name="email"
+                name="Email"
                 required
               />
             </div>
@@ -288,7 +288,7 @@ const ContactForm = ({ getInTouch, setGetInTouch }) => {
                 className=" w-full mt-[8px]  text-[12px] md:text-[16px] border-[1px] border-gray-200 px-[16px] py-[12px]  rounded-[8px]"
                 rows="5"
                 id="message"
-                name="message"
+                name="Message"
                 Required
               />
             </div>

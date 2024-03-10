@@ -22,23 +22,39 @@ const validate = (formData) => {
   }
 
   if (!formData.assessment1) {
-    errors.assessment1 = " Please select an option..";
+    errors.assessment1 = "Please select an option.";
   }
 
   if (!formData.assessment2) {
-    errors.assessment2 = " Please select an option..";
+    errors.assessment2 = "Please select an option.";
   }
 
   if (!formData.assessment3) {
-    errors.assessment3 = " Please select an option..";
+    errors.assessment3 = "Please select an option.";
   }
 
   if (!formData.assessment4) {
-    errors.assessment4 = " Please select an option..";
+    errors.assessment4 = "Please select an option.";
   }
 
   if (!formData.assessment5) {
-    errors.assessment5 = " Please select an option..";
+    errors.assessment5 = "Please select an option.";
+  }
+
+  if (!formData.eventName) {
+    errors.eventName = "Please enter an event name.";
+  }
+
+  if (!formData.date) {
+    errors.date = "Required";
+  }
+
+  if (!formData.duration) {
+    errors.duration = "Please enter event duration.";
+  }
+
+  if (!formData.overview) {
+    errors.overview = "Please type an overview.";
   }
 
   return errors;

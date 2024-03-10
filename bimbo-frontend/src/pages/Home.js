@@ -55,6 +55,8 @@ const Home = ({
   setShowAssessment,
   getInTouch,
   setGetInTouch,
+  bookAnEvent,
+  setBookAnEvent,
 }) => {
   const [active, setActive] = useState(0);
   const [popup1, setPopup1] = useState(false);
@@ -611,7 +613,12 @@ const Home = ({
             </h4>
           </div>
           <div className="lg:w-[40%] bg-[#FEEFE6] rounded-[24px] h-[416px] relative mt-[40px] lg:mt-[0px]">
-            <button className="w-[65px] h-[65px] rounded-full border-[1px] border-primary flex justify-center items-center bg-white absolute top-[48px] right-[24px] lg:right-[48px]">
+            <button
+              onClick={() => {
+                setBookAnEvent(!bookAnEvent);
+              }}
+              className="w-[65px] h-[65px] rounded-full border-[1px] border-primary flex justify-center items-center bg-white absolute top-[48px] right-[24px] lg:right-[48px]"
+            >
               {" "}
               <FiArrowUp className="text-[30px] stroke-[1px] text-[#021732] transform rotate-45" />
             </button>

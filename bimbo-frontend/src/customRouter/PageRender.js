@@ -17,6 +17,8 @@ const PageRender = ({
   setShowAssessment,
   getInTouch,
   setGetInTouch,
+  bookAnEvent,
+  setBookAnEvent,
 }) => {
   const { page, id } = useParams();
   let pageName = "";
@@ -31,7 +33,9 @@ const PageRender = ({
     setShowAssessment,
     getInTouch,
     setGetInTouch,
-  }); // Pass props to generatePage
+    bookAnEvent,
+    setBookAnEvent,
+  });
 };
 
 export default PageRender;

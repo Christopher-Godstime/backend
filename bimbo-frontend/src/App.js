@@ -9,6 +9,7 @@ function App() {
   const [show, setShow] = useState(false);
   const [showAssessment, setShowAssessment] = useState(false);
   const [getInTouch, setGetInTouch] = useState(false);
+  const [bookAnEvent, setBookAnEvent] = useState(false);
   return (
     <Router>
       <div className="font-sans">
@@ -20,6 +21,8 @@ function App() {
           setShowAssessment={setShowAssessment}
           getInTouch={getInTouch}
           setGetInTouch={setGetInTouch}
+          bookAnEvent={bookAnEvent}
+          setBookAnEvent={setBookAnEvent}
         />
       </div>
 
@@ -35,6 +38,8 @@ function App() {
                   setShowAssessment={setShowAssessment}
                   getInTouch={getInTouch}
                   setGetInTouch={setGetInTouch}
+                  bookAnEvent={bookAnEvent}
+                  setBookAnEvent={setBookAnEvent}
                 />
               }
             />
@@ -47,6 +52,8 @@ function App() {
                   setShowAssessment={setShowAssessment}
                   getInTouch={getInTouch}
                   setGetInTouch={setGetInTouch}
+                  bookAnEvent={bookAnEvent}
+                  setBookAnEvent={setBookAnEvent}
                 />
               }
             />

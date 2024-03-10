@@ -6,6 +6,7 @@ import logo from "../assets/logo.png";
 import logo4 from "../assets/logo4.png";
 import Assessment from "../pages/Assessment";
 import GetInTouch from "../pages/GetInTouch";
+import BookAnEvent from "../pages/BookAnEvent";
 
 const Navbar = ({
   show,
@@ -14,6 +15,8 @@ const Navbar = ({
   setShowAssessment,
   getInTouch,
   setGetInTouch,
+  bookAnEvent,
+  setBookAnEvent,
 }) => {
   const [fix, setFix] = useState(false);
 
@@ -24,6 +27,7 @@ const Navbar = ({
   const isMastery = location.pathname === "/mastery-form";
   const isExecutive = location.pathname === "/executive-form";
   const isTraining = location.pathname === "/training-form";
+  const isCoaches = location.pathname === "/coach-the-coaches";
 
   function setFixed() {
     if (window.scrollY >= 400) {
@@ -39,12 +43,13 @@ const Navbar = ({
     setShow(show);
     setShowAssessment(showAssessment);
     setGetInTouch(getInTouch);
-    if (show || showAssessment || getInTouch) {
+    setBookAnEvent(bookAnEvent);
+    if (show || showAssessment || getInTouch || bookAnEvent) {
       document.body.classList.add("overflow-y-hidden");
     } else {
       document.body.classList.remove("overflow-y-hidden");
     }
-  }, [show, showAssessment, getInTouch]);
+  }, [show, showAssessment, getInTouch, bookAnEvent]);
 
   return (
     <div>
@@ -66,7 +71,8 @@ const Navbar = ({
                     isDiscovering ||
                     isMastery ||
                     isExecutive ||
-                    isTraining ? (
+                    isTraining ||
+                    isCoaches ? (
                       <img className="w-[76px]" src={logo} />
                     ) : (
                       <img className="w-[76px]" src={logo4} />
@@ -82,7 +88,8 @@ const Navbar = ({
                   isDiscovering ||
                   isMastery ||
                   isExecutive ||
-                  isTraining
+                  isTraining ||
+                  isCoaches
                     ? "text-white"
                     : "text-black"
                 }`}
@@ -314,6 +321,34 @@ const Navbar = ({
         >
           <div className="overflow-y-auto h-[calc(100vh-100px)]">
             <GetInTouch getInTouch={getInTouch} setGetInTouch={setGetInTouch} />
+          </div>
+        </div>
+      </div>
+
+      <div
+        className={`fixed w-full h-full block ${
+          bookAnEvent ? "translate-y-0 z-40" : "translate-y-full z-40"
+        } ease-in-out duration-500`}
+        style={{
+          minWidth: bookAnEvent ? "200px" : "",
+          zIndex: bookAnEvent ? 50 : "",
+          background: bookAnEvent ? "black" : "",
+          color: bookAnEvent ? "white" : "",
+          top: bookAnEvent ? 0 : 0,
+        }}
+      >
+        <div
+          className={`bottom-0 left-1/2 transform -translate-x-1/2 z-40 absolute overflow-y-hidden  bg-white md:w-[542px] sm:w-[70%] w-[95%] md:rounded-[20px] rounded-[8px]  h-fit ${
+            bookAnEvent
+              ? "top-1/2 transform -translate-y-1/2"
+              : "translate-y-full"
+          } ease-in-out duration-500`}
+        >
+          <div className="overflow-y-auto h-[calc(100vh-100px)]">
+            <BookAnEvent
+              bookAnEvent={bookAnEvent}
+              setBookAnEvent={setBookAnEvent}
+            />
           </div>
         </div>
       </div>
