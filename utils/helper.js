@@ -46,8 +46,8 @@ exports.mailTransporterObj = {
 };
 
 exports.mailSource =
-  '"Bimbo Mesele Coaching Company" <christophergodstime45@gmail.com>';
-exports.sourceMail = "christophergodstime45@gmail.com";
+  '"Bimbo Mesele Coaching Company" <bimbomeselecoaching@gmail.com>';
+exports.sourceMail = "bimbomeselecoaching@gmail.com";
 
 exports.capitalizeFirstLetter = (arg) => {
   const firstLetter = arg.charAt(0).toUpperCase();

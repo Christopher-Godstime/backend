@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import { Link } from "react-router-dom";
 import ScrollToTopOnMount from "../components/ScrollToTopOnMount";
 import pic6 from "../assets/pic6.png";
 import c1 from "../assets/c1.png";
@@ -8,7 +8,12 @@ import c3 from "../assets/c3.png";
 import c4 from "../assets/c4.png";
 import logo1 from "../assets/logo1.png";
 
-const Contact = () => {
+const Contact = ({
+  getInTouch,
+  setGetInTouch,
+  bookAnEvent,
+  setBookAnEvent,
+}) => {
   return (
     <div className="-mt-[70px] pt-[70px]">
       <ScrollToTopOnMount />
@@ -46,7 +51,12 @@ const Contact = () => {
               <h4 className="text-[16px] font-[400] text-[#56575C]">
                 Our friendly team is here to help
               </h4>
-              <button className="font-[500] text-[16px] text-primary  mt-[8px]">
+              <button
+                onClick={() => {
+                  setGetInTouch(!getInTouch);
+                }}
+                className="font-[500] text-[16px] text-primary  mt-[8px]"
+              >
                 Click here.
               </button>
             </div>
@@ -67,7 +77,12 @@ const Contact = () => {
               <h4 className="text-[16px] font-[400] text-[#56575C]">
                 Our friendly team is here to help
               </h4>
-              <button className="font-[500] text-[16px] text-primary  mt-[8px]">
+              <button
+                onClick={() => {
+                  setBookAnEvent(!bookAnEvent);
+                }}
+                className="font-[500] text-[16px] text-primary  mt-[8px]"
+              >
                 Click here.
               </button>
             </div>
@@ -86,9 +101,11 @@ const Contact = () => {
               <h4 className="text-[16px] font-[400] text-[#56575C]">
                 Our friendly team is here to help
               </h4>
-              <button className="font-[500] text-[16px] text-primary  mt-[8px]">
-                Click here.
-              </button>
+              <Link to="/calendly">
+                <button className="font-[500] text-[16px] text-primary  mt-[8px]">
+                  Click here.
+                </button>
+              </Link>
             </div>
           </div>
 

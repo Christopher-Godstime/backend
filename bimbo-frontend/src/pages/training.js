@@ -350,14 +350,11 @@ const Training = ({
         <div className="py-[48px] ">
           <div className="lg:flex gap-[40px]">
             <div className="lg:w-[60%] bg-[#02152E] rounded-[24px] h-[416px] relative">
-              <button
-                onClick={() => {
-                  setGetInTouch(!getInTouch);
-                }}
-                className="w-[65px] h-[65px] rounded-full border-[1px] border-primary flex justify-center items-center bg-white absolute top-[48px] right-[24px] lg:right-[48px]"
-              >
-                <FiArrowUp className="text-[30px] stroke-[1px] text-primary transform rotate-45" />
-              </button>
+              <Link to="/calendly">
+                <button className="w-[65px] h-[65px] rounded-full border-[1px] border-primary flex justify-center items-center bg-white absolute top-[48px] right-[24px] lg:right-[48px]">
+                  <FiArrowUp className="text-[30px] stroke-[1px] text-primary transform rotate-45" />
+                </button>
+              </Link>
               <h4 className="text-white text-[36px] lg:text-[48px] font-[600] leading-[44px] absolute bottom-[48px] left-[24px] lg:left-[48px] pr-[24px] lg:pr-[48px]">
                 Schedule a one on one{" "}
               </h4>
