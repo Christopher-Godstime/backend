@@ -161,7 +161,7 @@ const ContactForm = ({ getInTouch, setGetInTouch }) => {
                   type="text"
                   name="First Name"
                   id="firstName"
-                  Required
+                  required
                 />
               </div>
               <div>
@@ -174,7 +174,7 @@ const ContactForm = ({ getInTouch, setGetInTouch }) => {
                   type="text"
                   name="Last Name"
                   id="lastName"
-                  Required
+                  required
                 />
               </div>
             </div>
@@ -289,7 +289,7 @@ const ContactForm = ({ getInTouch, setGetInTouch }) => {
                 rows="5"
                 id="message"
                 name="Message"
-                Required
+                required
               />
             </div>
           </div>

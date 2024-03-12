@@ -71,7 +71,7 @@ const CoachTheCoaches = () => {
             <h4 className="text-[30px] font-[700] text-center md:text-[72px] md:leading-[90px]">
               Coach the coaches coming soon
             </h4>
-            <h4 className="text-[18px] font-[500] text-center">
+            <h4 className="text-[18px] font-[500] text-center mt-[40px]">
               {" "}
               Coming in October 2024
             </h4>
@@ -88,7 +88,7 @@ const CoachTheCoaches = () => {
                   className="flex items-center gap-[20px]"
                 >
                   <input
-                    className="bg-transparent border-[1px] border-[#8B94A1] rounded-[8px] px-[14px] py-[10px] w-full  h-[45px]"
+                    className="bg-transparent border-[1px] border-[#8B94A1] rounded-[8px] px-[14px] py-[10px] w-full  h-[45px] placeholder:text-white"
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}

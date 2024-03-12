@@ -26,23 +26,23 @@ const About = ({ getInTouch, setGetInTouch, bookAnEvent, setBookAnEvent }) => {
         </div>
 
         <div className="xl:flex gap-[20px] py-[48px]">
-          <h4 className="text-[48px] font-[600] xl:w-[40%]">About Dr Bimbo</h4>
-          <div className="xl:w-[60%] mt-[20px] xl:mt-[0px]">
-            <h4 className="text-[24px] font-[500] leading-[32px] text-[#556476] text-justify xl:mb-[70px] mb-[50px]">
+          <h4 className="text-[48px] font-[600] xl:w-[50%]">About Dr Bimbo</h4>
+          <div className="xl:w-[50%] mt-[20px] xl:mt-[0px]">
+            <h4 className="text-[24px] font-[400] leading-[32px] text-[#556476] text-justify xl:mb-[70px] mb-[50px]">
               I am Dr. Bimbo Mesele and I help leaders gain clarity about their
               lives' journey so that they can redefine their outcomes. As a
               seasoned clarity coach, I am passionate about helping individuals
               thrive in their respective sectors by providing insightful
               guidance and support
             </h4>
-            <h4 className="text-[24px] font-[500] leading-[32px] text-[#556476] text-justify xl:mb-[70px] mb-[50px]">
+            <h4 className="text-[24px] font-[400] leading-[32px] text-[#556476] text-justify xl:mb-[70px] mb-[50px]">
               With a proven track record in leadership and excellence, I am a
               dynamic force in the fields of consulting, leadership development,
               purpose discovery, and transformation. I specialize in guiding
               people as they navigate their paths, empowering them to uncover
               clarity and achieve their goals
             </h4>
-            <h4 className="text-[24px] font-[500] leading-[32px] text-[#556476] text-justify ">
+            <h4 className="text-[24px] font-[400] leading-[32px] text-[#556476] text-justify ">
               Through high-quality personal and group coaching sessions and
               workshops, I train leaders to develop the skills and mindset
               necessary for success in both their personal and professional

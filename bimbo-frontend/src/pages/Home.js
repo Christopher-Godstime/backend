@@ -1,6 +1,8 @@
 import { useRef, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import pic3 from "../assets/pic3.png";
+import h1 from "../assets/h1.png";
+import h2 from "../assets/h2.png";
 import pic2 from "../assets/pic2.png";
 import pic5 from "../assets/pic5.png";
 import pic7 from "../assets/pic7.png";
@@ -251,7 +253,7 @@ const Home = ({
           <div className="lg:pb-[70%] pb-[120%] pr-[24px] relative overflow-hidden ">
             <img
               className="rounded-[16px] absolute top-0 left-0 w-[100%] h-[100%] object-cover "
-              src={home2}
+              src={h1}
               alt="Background"
             />
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black rounded-[16px]"></div>
@@ -277,7 +279,7 @@ const Home = ({
           <div className="lg:pb-[70%] pb-[120%] pr-[24px] relative overflow-hidden ">
             <img
               className="rounded-[16px] absolute top-0 left-0 w-[100%] h-[100%] object-cover "
-              src={home2}
+              src={h2}
               alt="Background"
             />
             <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent to-black rounded-[16px]"></div>
@@ -593,7 +595,7 @@ const Home = ({
               </div>
               <div className="absolute bottom-[30px] md:bottom-[50px] w-[10px] h-[10px] md:right-[50px] right-[30px] transform translate-x-[50%] translate-y-[50%] -rotate-90">
                 <h4 className="text-white lg:text-primary lg:text-[36px] text-[20px] leading-[20px] font-[600] whitespace-nowrap">
-                  Leadership courses
+                  Leadership
                 </h4>
               </div>
             </div>

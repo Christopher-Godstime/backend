@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import pic3 from "../assets/pic3.png";
 import pic7 from "../assets/pic7.png";
 import ScrollToTopOnMount from "../components/ScrollToTopOnMount";
-import home2 from "../assets/home2.png";
+import h2 from "../assets/h2.png";
 import check from "../assets/check.png";
 import d1 from "../assets/d1.png";
 import d2 from "../assets/d2.png";
@@ -23,8 +23,76 @@ const Mastery = ({ showAssessment, setShowAssessment }) => {
     <div className="-mt-[70px] pt-[70px]">
       <ScrollToTopOnMount />
       <div className=" px-[4%] xl:px-[60px] 2xl:px-[15%]">
-        <div className="xl:flex lg:gap-[48px]">
-          <div className="xl:w-[60%]">
+        <div class="w-[100%]  xl:-mt-[100px]">
+          <div class="xl:sticky xl:pt-[100px] top-[20px] hidden xl:block xl:w-[40%] xl:ml-[60%] xl:pl-[10px]">
+            <div className=" ">
+              <div className="pb-[40%]  relative overflow-hidden  rounded-t-[24px] ">
+                <img
+                  className=" absolute top-0 left-0 w-[100%] h-[100%] object-cover "
+                  src={h2}
+                  alt="Background"
+                />
+              </div>
+              <div className="border-[1px] bordr-gray-200 rounded-b-[24px] p-[24px]">
+                <h4 className="text-[36px] font-[600] leading-[44px]">
+                  Discovering the New You
+                </h4>
+                <h4 className="text-[#35455B] font-[500] text-justify mt-[24px]">
+                  This course is designed to enhance participants' communication
+                  skills in various personal and professional settings. It
+                  covers a range of topics, including verbal and non-verbal
+                  communication, active listening, interpersonal skills, and
+                  overcoming communication barriers.
+                </h4>
+                <div className="flex gap-[12px] mt-[12px] overflow-x-auto">
+                  <div className="flex items-center gap-[4px]">
+                    <div>
+                      <img className="w-[16px]" src={small1} />
+                    </div>
+                    <h4 className="text-[12px] font-[500] text-text">
+                      Starting May 9
+                    </h4>
+                  </div>
+                  <div className="flex items-center gap-[4px]">
+                    <div>
+                      <img className="w-[16px]" src={small2} />
+                    </div>
+                    <h4 className="text-[12px] font-[500] text-text">
+                      Duration 6 Weeks
+                    </h4>
+                  </div>
+                  <div className="flex items-center gap-[4px]">
+                    <div>
+                      <img className="w-[16px]" src={small3} />
+                    </div>
+                    <h4 className="text-[12px] font-[500] text-text">Online</h4>
+                  </div>
+                </div>
+                <h4 className="text-[14px] font-[700] mt-[40px] text-primary">
+                  UPCOMING COURSE
+                </h4>
+                <div className="flex justify-between items-center mt-[15px]">
+                  <div>
+                    <h4 className="text-[24px] font-[600]">
+                      Feb 12- Mar 1, 2024
+                    </h4>
+                    <h4 className="text-text ">Last day to book: Feb 6</h4>
+                  </div>
+                  <Link to="/discovering-form">
+                    <button className=" py-[10px] px-[18px] text-secondary rounded-[8px] bg-white text-[14px] font-[500] border-[1px] border-gray-200 hover:bg-gray-100 md:w-fit">
+                      Register now
+                    </button>
+                  </Link>
+                </div>
+                <Link to="/discovering">
+                  <button className="w-full py-[12px] px-[20px] text-white rounded-[8px] bg-secondary text-[14px] font-[500] hover:bg-black mt-[48px]">
+                    View more
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          <div class="xl:w-[60%] xl:-mt-[700px] xl:pr-[70px]">
             <div className="pt-[48px]">
               <h4 className="text-[30px] font-[600] md:text-[48px] md:font-[700] md:leading-[60px]">
                 Gaining Mastery
@@ -149,7 +217,7 @@ const Mastery = ({ showAssessment, setShowAssessment }) => {
                     <img className="w-[32px]" src={check} />
                   </div>
                   <div>
-                    <h4 className="text-[#35455B text-[18px] font-[700] leading-[28px]">
+                    <h4 className="text-[#35455B text-[18px] md:text-[24px] md:leading-[32px] font-[700] leading-[28px]">
                       Develop Mastery Skills
                     </h4>
                     <h4 className="text-[16px] font-[400] text-text mt-[10px]">
@@ -165,7 +233,7 @@ const Mastery = ({ showAssessment, setShowAssessment }) => {
                     <img className="w-[32px]" src={check} />
                   </div>
                   <div>
-                    <h4 className="text-[#35455B text-[18px] font-[700] leading-[28px]">
+                    <h4 className="text-[#35455B text-[18px] md:text-[24px] md:leading-[32px] font-[700] leading-[28px]">
                       Progress Tracking and Feedback
                     </h4>
                     <h4 className="text-[16px] font-[400] text-text mt-[10px]">
@@ -180,7 +248,7 @@ const Mastery = ({ showAssessment, setShowAssessment }) => {
                     <img className="w-[32px]" src={check} />
                   </div>
                   <div>
-                    <h4 className="text-[#35455B text-[18px] font-[700] leading-[28px]">
+                    <h4 className="text-[#35455B text-[18px] md:text-[24px] md:leading-[32px] font-[700] leading-[28px]">
                       Access to valuable coaching resources
                     </h4>
                     <h4 className="text-[16px] font-[400] text-text mt-[10px]">
@@ -196,7 +264,7 @@ const Mastery = ({ showAssessment, setShowAssessment }) => {
                     <img className="w-[32px]" src={check} />
                   </div>
                   <div>
-                    <h4 className="text-[#35455B text-[18px] font-[700] leading-[28px]">
+                    <h4 className="text-[#35455B text-[18px] md:text-[24px] md:leading-[32px] font-[700] leading-[28px]">
                       Empowering community support
                     </h4>
                     <h4 className="text-[16px] font-[400] text-text mt-[10px]">
@@ -277,76 +345,8 @@ const Mastery = ({ showAssessment, setShowAssessment }) => {
               </div>
             </div>
           </div>
-          <div className="xl:w-[40%] hidden lg:block pt-[48px]">
-            <div className=" ">
-              <div className="pb-[40%]  relative overflow-hidden  rounded-t-[24px] ">
-                <img
-                  className=" absolute top-0 left-0 w-[100%] h-[100%] object-cover "
-                  src={home2}
-                  alt="Background"
-                />
-              </div>
-              <div className="border-[1px] bordr-gray-200 rounded-b-[24px] p-[24px]">
-                <h4 className="text-[36px] font-[600] leading-[44px]">
-                  Discovering the New You
-                </h4>
-                <h4 className="text-[#35455B] font-[500] text-justify mt-[40px]">
-                  This course is designed to enhance participants' communication
-                  skills in various personal and professional settings. It
-                  covers a range of topics, including verbal and non-verbal
-                  communication, active listening, interpersonal skills, and
-                  overcoming communication barriers.
-                </h4>
-                <div className="flex gap-[12px] mt-[12px] overflow-x-auto">
-                  <div className="flex items-center gap-[4px]">
-                    <div>
-                      <img className="w-[16px]" src={small1} />
-                    </div>
-                    <h4 className="text-[12px] font-[500] text-text">
-                      Starting May 9
-                    </h4>
-                  </div>
-                  <div className="flex items-center gap-[4px]">
-                    <div>
-                      <img className="w-[16px]" src={small2} />
-                    </div>
-                    <h4 className="text-[12px] font-[500] text-text">
-                      Duration 6 Weeks
-                    </h4>
-                  </div>
-                  <div className="flex items-center gap-[4px]">
-                    <div>
-                      <img className="w-[16px]" src={small3} />
-                    </div>
-                    <h4 className="text-[12px] font-[500] text-text">Online</h4>
-                  </div>
-                </div>
-                <h4 className="text-[14px] font-[700] mt-[40px] text-primary">
-                  UPCOMING COURSE
-                </h4>
-                <div className="flex justify-between items-center mt-[15px]">
-                  <div>
-                    <h4 className="text-[24px] font-[600]">
-                      Feb 12- Mar 1, 2024
-                    </h4>
-                    <h4 className="text-text ">Last day to book: Feb 6</h4>
-                  </div>
-                  <Link to="/discovering-form">
-                    <button className=" py-[10px] px-[18px] text-secondary rounded-[8px] bg-white text-[14px] font-[500] border-[1px] border-gray-200 hover:bg-gray-100 md:w-fit">
-                      Register now
-                    </button>
-                  </Link>
-                </div>
-                <Link to="/discovering">
-                  <button className="w-full py-[12px] px-[20px] text-white rounded-[8px] bg-secondary text-[14px] font-[500] hover:bg-black mt-[48px]">
-                    View more
-                  </button>
-                </Link>
-              </div>
-            </div>
-          </div>
         </div>
-
+        <div className="xl:sticky top-0"></div>
         <div className="my-[48px] lg:mx-[8%]">
           <h4 className="text-[36px] font-[600] md:flex justify-center">
             Meet your instructor
