@@ -21,31 +21,141 @@ const Calendar = ({
   };
   const schedule = [
     {
+      month: "January",
+      content: [
+        {
+          heading: "Registration Deadline",
+          address: "Online",
+          date: "6/01/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Group Coaching",
+          address: "Online",
+          date: "13/01/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Group Coaching",
+          address: "Online",
+          date: "20/01/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Group Coaching",
+          address: "Online",
+          date: "27/01/2024",
+          time: "Not available",
+        },
+      ],
+    },
+    {
+      month: "February",
+      content: [
+        {
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "10/02/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "17/02/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "24/02/2024",
+          time: "Not available",
+        },
+      ],
+    },
+    {
+      month: "March",
+      content: [
+        {
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "2/03/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "9/03/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "16/03/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "23/03/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "30/03/2024",
+          time: "Not available",
+        },
+      ],
+    },
+    {
+      month: "April",
+      content: [
+        {
+          heading: "Registration Deadline",
+          address: "Online",
+          date: "6/04/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Group Coaching",
+          address: "Online",
+          date: "13/04/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Group Coaching",
+          address: "Online",
+          date: "20/04/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Group Coaching",
+          address: "Online",
+          date: "27/04/2024",
+          time: "Not available",
+        },
+      ],
+    },
+    {
       month: "May",
       content: [
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "11/05/2024",
+          time: "Not available",
         },
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "18/05/2024",
+          time: "Not available",
         },
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
-        },
-        {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "25/05/2024",
+          time: "Not available",
         },
       ],
     },
@@ -53,28 +163,34 @@ const Calendar = ({
       month: "June",
       content: [
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "1/06/2024",
+          time: "Not available",
         },
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "8/06/2024",
+          time: "Not available",
         },
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "15/06/2024",
+          time: "Not available",
         },
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "22/06/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "29/06/2024",
+          time: "Not available",
         },
       ],
     },
@@ -82,28 +198,28 @@ const Calendar = ({
       month: "July",
       content: [
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Registration Deadline",
+          address: "Online",
+          date: "6/07/2024",
+          time: "Not available",
         },
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Group Coaching",
+          address: "Online",
+          date: "13/07/2024",
+          time: "Not available",
         },
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Group Coaching",
+          address: "Online",
+          date: "20/07/2024",
+          time: "Not available",
         },
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Group Coaching",
+          address: "Online",
+          date: "27/07/2024",
+          time: "Not available",
         },
       ],
     },
@@ -111,28 +227,28 @@ const Calendar = ({
       month: "August",
       content: [
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "10/08/2024",
+          time: "Not available",
         },
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "17/08/2024",
+          time: "Not available",
         },
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "24/08/2024",
+          time: "Not available",
         },
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "31/08/2024",
+          time: "Not available",
         },
       ],
     },
@@ -140,28 +256,28 @@ const Calendar = ({
       month: "September",
       content: [
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "7/09/2024",
+          time: "Not available",
         },
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "14/09/2024",
+          time: "Not available",
         },
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "21/09/2024",
+          time: "Not available",
         },
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "28/09/2024",
+          time: "Not available",
         },
       ],
     },
@@ -169,28 +285,86 @@ const Calendar = ({
       month: "October",
       content: [
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Registration Deadline",
+          address: "Online",
+          date: "6/10/2024",
+          time: "Not available",
         },
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Group Coaching",
+          address: "Online",
+          date: "12/10/2024",
+          time: "Not available",
         },
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Group Coaching",
+          address: "Online",
+          date: "19/10/2024",
+          time: "Not available",
         },
         {
-          heading: "Thrive Conference - Dominion",
-          address: "Kings Hub 10 Bush Street Anthony, Maryland, Lagos",
-          date: "3/02/2024",
-          time: "10AM",
+          heading: "Group Coaching",
+          address: "Online",
+          date: "26/10/2024",
+          time: "Not available",
+        },
+      ],
+    },
+    {
+      month: "November",
+      content: [
+        {
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "9/11/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "16/11/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "23/11/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "30/11/2024",
+          time: "Not available",
+        },
+      ],
+    },
+    {
+      month: "December",
+      content: [
+        {
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "7/12/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "14/12/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "21/12/2024",
+          time: "Not available",
+        },
+        {
+          heading: "Personal Coaching",
+          address: "Online",
+          date: "28/12/2024",
+          time: "Not available",
         },
       ],
     },
@@ -243,20 +417,20 @@ const Calendar = ({
                 {drop.content.map((content, i) => (
                   <div key={i}>
                     <div className="flex justify-between border-[1px] border-gray-200 md:border-gray-400 py-[24px] lg:py-[32px] px-[4%] lg:px-[32px] gap-[20px] mb-[20px] rounded-[16px]">
-                      <div className="w-[60%]  xl:flex xl:w-[70%] xl:gap-[20px]">
-                        <h4 className="text-[16px] font-[600] leading-[24px] xl:w-[45%]">
+                      <div className="w-[50%]  lg:flex lg:w-[50%] lg:gap-[20px]">
+                        <h4 className="text-[16px] font-[600] leading-[24px] lg:w-[50%]">
                           {content.heading}
                         </h4>
-                        <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] xl:w-[55%]">
+                        <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] lg:w-[50%] text-start lg:text-center">
                           {content.address}
                         </h4>
                       </div>
-                      <div className=" xl:w-[30%] xl:flex xl:gap-[20px]">
+                      <div className=" lg:w-[50%] lg:flex lg:gap-[20px]">
                         {" "}
-                        <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end xl:w-[50%]">
+                        <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] lg:text-center text-end lg:w-[50%]">
                           {content.date}
                         </h4>
-                        <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end xl:w-[50%]">
+                        <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end lg:w-[50%]">
                           {content.time}
                         </h4>
                       </div>

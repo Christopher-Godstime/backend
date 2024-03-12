@@ -14,13 +14,15 @@ const About = ({ getInTouch, setGetInTouch, bookAnEvent, setBookAnEvent }) => {
           LEGACY IS GREATER THAN CURRENCY
         </h4>
         <div className="">
-          <div className="md:py-[30%] py-[75%] relative overflow-hidden mx-auto rounded-[24px] md:rounded-[0px]">
-            <img
-              className="rounded-[24px] absolute top-0 left-0 w-full h-full object-cover "
-              src={pic2}
-              alt="Background"
-            />
-          </div>
+          <div
+            className={`bg-no-repeat z-10  w-full bg-cover bg-center md:h-screen h-[259px]  relative rounded-[24px]`}
+            style={{
+              backgroundImage: `url(${pic2})`,
+              backgroundSize: "cover",
+              backgroundPosition: "top",
+              backdropFilter: "",
+            }}
+          ></div>
         </div>
 
         <div className="xl:flex gap-[20px] py-[48px]">

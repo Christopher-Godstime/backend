@@ -83,9 +83,12 @@ const CoachTheCoaches = () => {
                 <h4 className="text-[14px] font-[500] text-[#8B94A1]">
                   Email Address
                 </h4>
-                <form onSubmit={onSubmit} className="flex items-center">
+                <form
+                  onSubmit={onSubmit}
+                  className="flex items-center gap-[20px]"
+                >
                   <input
-                    className="bg-transparent border-[1px] border-[#8B94A1] rounded-l-[8px] px-[14px] py-[10px] w-full -mr-[8px] h-[45px]"
+                    className="bg-transparent border-[1px] border-[#8B94A1] rounded-[8px] px-[14px] py-[10px] w-full  h-[45px]"
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}

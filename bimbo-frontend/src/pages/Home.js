@@ -213,19 +213,30 @@ const Home = ({
         <div className={` overflow-x-auto mt-[20px] `}>
           {Menus[active].name === "Vision" && (
             <div className="w-full">
-              <h4 className="text-center text-[24px] font-[700] xl:text-[48px] xl:font-[600] xl:leading-[60px] leading-[32px] mt-[60px] md:w-[75%] mx-auto ">
-                <span className="text-primary">Certainly!</span> Life
-                development courses can cover a wide range of topics to help
-                individuals enhance their personal and professional growth.
+              <h4 className="text-center text-[24px] font-[700] xl:text-[36px] xl:font-[600] xl:leading-[44px] leading-[32px] mt-[60px] md:w-[75%] mx-auto ">
+                To equip and empower leaders through transformative coaching,
+                guiding them through clarity toward success and significance.
               </h4>
             </div>
           )}
           {Menus[active].name === "Mission" && (
             <div className="w-full">
-              <h4 className="text-center text-[24px] font-[700] xl:text-[48px] xl:font-[600] xl:leading-[60px] leading-[32px] mt-[60px] md:w-[75%] mx-auto ">
-                <span className="text-primary">Certainly!</span> Life
-                development courses can cover a wide range of topics to help
-                individuals enhance their personal and professional growth.
+              <h4 className="text-center text-[24px] font-[700] xl:text-[36px] xl:font-[600] xl:leading-[44px] leading-[32px] mt-[60px] md:w-[75%] mx-auto ">
+                <ul className="list-disc ">
+                  <li>
+                    Strategic Guidance: Providing guidance through group,
+                    personal, or hybrid coaching to help leaders gain clarity to
+                    achieve goals effectively.
+                  </li>
+                  <li className="">
+                    Growth: Delivering transformative strategies for remarkable
+                    growth outcomes in personal and professional spheres. 
+                  </li>
+                  <li>
+                    Supportive Community: Fostering connection and support
+                    through impactful group coaching experiences.
+                  </li>
+                </ul>
               </h4>
             </div>
           )}
@@ -254,9 +265,11 @@ const Home = ({
                   topics to help individuals enhance their personal and
                   professional growth.
                 </h4>
-                <button className="w-full md:w-fit py-[12px] px-[20px] rounded-[8px]  bg-primary text-white text-[16px] font-[500] hover:bg-orange-600">
-                  Get Started
-                </button>
+                <Link to="mastery">
+                  <button className="w-full md:w-fit py-[12px] px-[20px] rounded-[8px]  bg-primary text-white text-[16px] font-[500] hover:bg-orange-600">
+                    Get Started
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -278,9 +291,11 @@ const Home = ({
                   topics to help individuals enhance their personal and
                   professional growth.
                 </h4>
-                <button className="w-full md:w-fit py-[12px] px-[20px] rounded-[8px]  bg-primary text-white text-[16px] font-[500] hover:bg-orange-600">
-                  Get Started
-                </button>
+                <Link to="discovering">
+                  <button className="w-full md:w-fit py-[12px] px-[20px] rounded-[8px]  bg-primary text-white text-[16px] font-[500] hover:bg-orange-600">
+                    Get Started
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -321,98 +336,99 @@ const Home = ({
             </button>
           </Link>
         </div>
+
         <div className="flex justify-between border-b-[1px] border-gray-200 py-[20px] gap-[20px]">
-          <div className="w-[60%]  xl:flex xl:w-[70%] xl:gap-[20px]">
-            <h4 className="text-[16px] font-[600] leading-[24px] xl:w-[45%]">
-              Thrive Conference - Dominion
+          <div className="w-[50%]  lg:flex lg:w-[50%] lg:gap-[20px]">
+            <h4 className="text-[16px] font-[600] leading-[24px] lg:w-[50%]">
+              Personal Coaching
             </h4>
-            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] xl:w-[55%]">
-              Kings Hub 10 Bush Street Anthony, Maryland, Lagos
+            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] lg:w-[50%] text-start lg:text-center">
+              Online
             </h4>
           </div>
-          <div className=" xl:w-[30%] xl:flex xl:gap-[20px]">
+          <div className=" lg:w-[50%] lg:flex lg:gap-[20px]">
             {" "}
-            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end xl:w-[50%]">
-              3/02/2024
+            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] lg:text-center text-end lg:w-[50%]">
+              2/03/2024
             </h4>
-            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end xl:w-[50%]">
-              10AM
+            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end lg:w-[50%]">
+              Not available
             </h4>
           </div>
         </div>
         <div className="flex justify-between border-b-[1px] border-gray-200 py-[20px] gap-[20px]">
-          <div className="w-[60%]  xl:flex xl:w-[70%] xl:gap-[20px]">
-            <h4 className="text-[16px] font-[600] leading-[24px] xl:w-[45%]">
-              Thrive Conference - Dominion
+          <div className="w-[50%]  lg:flex lg:w-[50%] lg:gap-[20px]">
+            <h4 className="text-[16px] font-[600] leading-[24px] lg:w-[50%]">
+              Personal Coaching
             </h4>
-            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] xl:w-[55%]">
-              Kings Hub 10 Bush Street Anthony, Maryland, Lagos
+            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] lg:w-[50%] text-start lg:text-center">
+              Online
             </h4>
           </div>
-          <div className=" xl:w-[30%] xl:flex xl:gap-[20px]">
+          <div className=" lg:w-[50%] lg:flex lg:gap-[20px]">
             {" "}
-            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end xl:w-[50%]">
-              3/02/2024
+            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] lg:text-center text-end lg:w-[50%]">
+              9/03/2024
             </h4>
-            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end xl:w-[50%]">
-              10AM
+            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end lg:w-[50%]">
+              Not available
             </h4>
           </div>
         </div>
         <div className="flex justify-between border-b-[1px] border-gray-200 py-[20px] gap-[20px]">
-          <div className="w-[60%]  xl:flex xl:w-[70%] xl:gap-[20px]">
-            <h4 className="text-[16px] font-[600] leading-[24px] xl:w-[45%]">
-              Thrive Conference - Dominion
+          <div className="w-[50%]  lg:flex lg:w-[50%] lg:gap-[20px]">
+            <h4 className="text-[16px] font-[600] leading-[24px] lg:w-[50%]">
+              Personal Coaching
             </h4>
-            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] xl:w-[55%]">
-              Kings Hub 10 Bush Street Anthony, Maryland, Lagos
+            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] lg:w-[50%] text-start lg:text-center">
+              Online
             </h4>
           </div>
-          <div className=" xl:w-[30%] xl:flex xl:gap-[20px]">
+          <div className=" lg:w-[50%] lg:flex lg:gap-[20px]">
             {" "}
-            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end xl:w-[50%]">
-              3/02/2024
+            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] lg:text-center text-end lg:w-[50%]">
+              16/03/2024
             </h4>
-            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end xl:w-[50%]">
-              10AM
+            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end lg:w-[50%]">
+              Not available
             </h4>
           </div>
         </div>
         <div className="flex justify-between border-b-[1px] border-gray-200 py-[20px] gap-[20px]">
-          <div className="w-[60%]  xl:flex xl:w-[70%] xl:gap-[20px]">
-            <h4 className="text-[16px] font-[600] leading-[24px] xl:w-[45%]">
-              Thrive Conference - Dominion
+          <div className="w-[50%]  lg:flex lg:w-[50%] lg:gap-[20px]">
+            <h4 className="text-[16px] font-[600] leading-[24px] lg:w-[50%]">
+              Personal Coaching
             </h4>
-            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] xl:w-[55%]">
-              Kings Hub 10 Bush Street Anthony, Maryland, Lagos
+            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] lg:w-[50%] text-start lg:text-center">
+              Online
             </h4>
           </div>
-          <div className=" xl:w-[30%] xl:flex xl:gap-[20px]">
+          <div className=" lg:w-[50%] lg:flex lg:gap-[20px]">
             {" "}
-            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end xl:w-[50%]">
-              3/02/2024
+            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] lg:text-center text-end lg:w-[50%]">
+              23/03/2024
             </h4>
-            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end xl:w-[50%]">
-              10AM
+            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end lg:w-[50%]">
+              Not available
             </h4>
           </div>
         </div>
         <div className="flex justify-between border-b-[1px] border-gray-200 py-[20px] gap-[20px]">
-          <div className="w-[60%]  xl:flex xl:w-[70%] xl:gap-[20px]">
-            <h4 className="text-[16px] font-[600] leading-[24px] xl:w-[45%]">
-              Thrive Conference - Dominion
+          <div className="w-[50%]  lg:flex lg:w-[50%] lg:gap-[20px]">
+            <h4 className="text-[16px] font-[600] leading-[24px] lg:w-[50%]">
+              Personal Coaching
             </h4>
-            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] xl:w-[55%]">
-              Kings Hub 10 Bush Street Anthony, Maryland, Lagos
+            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] lg:w-[50%] text-start lg:text-center">
+              Online
             </h4>
           </div>
-          <div className=" xl:w-[30%] xl:flex xl:gap-[20px]">
+          <div className=" lg:w-[50%] lg:flex lg:gap-[20px]">
             {" "}
-            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end xl:w-[50%]">
-              3/02/2024
+            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] lg:text-center text-end lg:w-[50%]">
+              30/03/2024
             </h4>
-            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end xl:w-[50%]">
-              10AM
+            <h4 className="text-[16px] font-[400] leading-[24px] text-[#556476] text-end lg:w-[50%]">
+              Not available
             </h4>
           </div>
         </div>
@@ -543,9 +559,11 @@ const Home = ({
               I am Dr. Bimbo Mesele and I help leaders gain clarity about their
               lives' journey so that they can redefine their outcomes.{" "}
             </h4>
-            <button className="bg-primary hover:bg-orange-600 rounded-[8px] px-[20px] py-[12px] text-white font-[500] w-full mt-[20px] xl:mt-[30px] md:w-fit">
-              View more
-            </button>
+            <Link to="about">
+              <button className="bg-primary hover:bg-orange-600 rounded-[8px] px-[20px] py-[12px] text-white font-[500] w-full mt-[20px] xl:mt-[30px] md:w-fit">
+                View more
+              </button>
+            </Link>
           </div>
           <div className="lg:w-[58%] gap-[8px] md:gap-[15px] flex mt-[40px] lg:mt-[0px]">
             <div className="w-[50%]">

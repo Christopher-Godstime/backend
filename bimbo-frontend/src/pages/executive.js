@@ -102,52 +102,27 @@ const Executive = ({
                 <h4 className="text-[30px] md:text-[36px] font-[600]">
                   COURSE OVERVIEW
                 </h4>
-                <h4 className="text-[16px] font-[500] leading-[24px] text-justify text-text mt-[16px]">
+                <h4 className="text-[16px] font-[500] leading-[24px] text-justify text-text mt-[16px] border-b-[1px] border-gray-200 pb-[24px]">
                   Become a conscious, inspiring leader. Scale your company.
-                  Enjoy the journey.
-                  <h4 className="pt-[15px] md:pt-[0px]">
-                    Most entrepreneurs experience building a startup as a
-                    violent roller coaster ride, with huge swings of emotion.
-                  </h4>
-                  <button className="text-[16px] font-[600] text-primary mt-[32px] md:mt-[16px]">
-                    See more
-                  </button>
+                  Enjoy the journey.Most entrepreneurs experience building a
+                  startup as a violent roller coaster ride, with huge swings of
+                  emotion.
                 </h4>
               </div>
             </div>
 
             <div>
               <h4 className="text-[30px] md:text-[36px] font-[600]">
-                Who is this course for
+                Who is this course for?
               </h4>
-              <div className="grid gris-cols-1 md:grid-cols-3 gap-[16px] mt-[20px] md:mt-[16px]">
-                <div className="border-[1px] border-gray-200 rounded-[12px] p-[22px] md:p-[24px]">
-                  <div className="w-[48px] h-[48px] rounded-full bg-secondary text-white text-[18px] font-[500] flex justify-center items-center">
-                    01
-                  </div>
-                  <h4 className="mt-[21px] font-[500] text-[16px] text-text">
-                    Startup founders & CEOs (primarily seed, Series A and B with
-                    10 - 100 team members)
-                  </h4>
-                </div>
-                <div className="border-[1px] border-gray-200 rounded-[12px] p-[22px]">
-                  <div className="w-[48px] h-[48px] rounded-full bg-secondary text-white text-[18px] font-[500] flex justify-center items-center">
-                    02
-                  </div>
-                  <h4 className="mt-[21px] font-[500] text-[16px] text-text">
-                    Committed to doing the deep inner work required to
-                    create transformation.
-                  </h4>
-                </div>
-                <div className="border-[1px] border-gray-200 rounded-[12px] p-[22px]">
-                  <div className="w-[48px] h-[48px] rounded-full bg-secondary text-white text-[18px] font-[500] flex justify-center items-center">
-                    03
-                  </div>
-                  <h4 className="mt-[21px] font-[500] text-[16px] text-text">
-                    Want to be part of an amazing, supportive,
-                    heart-centered group of fellow entrepreneurs.
-                  </h4>
-                </div>
+              <div className=" mt-[20px] md:mt-[16px]">
+                <h4 className="text-[16px] font-[500] leading-[24px] text-justify text-text mt-[16px] border-b-[1px] border-gray-200 pb-[24px]">
+                  Whether you are looking to develop leadership capabilities,
+                  improve team collaboration, or enhance technical skills, our
+                  customized training programs are designed to deliver
+                  measurable results and drive lasting impact for your
+                  organization.
+                </h4>
               </div>
             </div>
 
@@ -306,7 +281,7 @@ const Executive = ({
               </div>
               <div className="border-[1px] bordr-gray-200 rounded-b-[24px] p-[24px]">
                 <h4 className="text-[36px] font-[600] leading-[44px]">
-                  Gaining Mastery
+                  Discovering the New You
                 </h4>
                 <h4 className="text-[#35455B] font-[500] text-justify mt-[40px]">
                   This course is designed to enhance participants' communication
@@ -315,14 +290,29 @@ const Executive = ({
                   communication, active listening, interpersonal skills, and
                   overcoming communication barriers.
                 </h4>
-                <div className="flex gap-[12px] mt-[12px]">
-                  <h4 className="text-[12px] font-[500] text-text">
-                    Starting May 9
-                  </h4>
-                  <h4 className="text-[12px] font-[500] text-text">
-                    Duration 6 Weeks
-                  </h4>
-                  <h4 className="text-[12px] font-[500] text-text">Online</h4>
+                <div className="flex gap-[12px] mt-[12px] overflow-x-auto">
+                  <div className="flex items-center gap-[4px]">
+                    <div>
+                      <img className="w-[16px]" src={small1} />
+                    </div>
+                    <h4 className="text-[12px] font-[500] text-text">
+                      Starting May 9
+                    </h4>
+                  </div>
+                  <div className="flex items-center gap-[4px]">
+                    <div>
+                      <img className="w-[16px]" src={small2} />
+                    </div>
+                    <h4 className="text-[12px] font-[500] text-text">
+                      Duration 6 Weeks
+                    </h4>
+                  </div>
+                  <div className="flex items-center gap-[4px]">
+                    <div>
+                      <img className="w-[16px]" src={small3} />
+                    </div>
+                    <h4 className="text-[12px] font-[500] text-text">Online</h4>
+                  </div>
                 </div>
                 <h4 className="text-[14px] font-[700] mt-[40px] text-primary">
                   UPCOMING COURSE
@@ -334,13 +324,13 @@ const Executive = ({
                     </h4>
                     <h4 className="text-text ">Last day to book: Feb 6</h4>
                   </div>
-                  <Link to="/mastery-form">
+                  <Link to="/discovering-form">
                     <button className=" py-[10px] px-[18px] text-secondary rounded-[8px] bg-white text-[14px] font-[500] border-[1px] border-gray-200 hover:bg-gray-100 md:w-fit">
                       Register now
                     </button>
                   </Link>
                 </div>
-                <Link to="/mastery">
+                <Link to="/discovering">
                   <button className="w-full py-[12px] px-[20px] text-white rounded-[8px] bg-secondary text-[14px] font-[500] hover:bg-black mt-[48px]">
                     View more
                   </button>
@@ -350,12 +340,12 @@ const Executive = ({
           </div>
         </div>
 
-        <div className="mt-[48px]">
+        <div className="my-[48px] lg:mx-[8%]">
           <h4 className="text-[36px] font-[600] md:flex justify-center">
             Meet your instructor
           </h4>
           <div className="md:flex mt-[10px] md:mt-[28px] md:items-center ">
-            <div className=" md:min-w-[318px] md:mx-[48px] ">
+            <div className=" md:min-w-[318px] md:mr-[48px] ">
               <div className="pb-[100%] md:pb-[115%]  relative overflow-hidden  rounded-[24px] ">
                 <img
                   className=" absolute top-0 left-0 w-[100%] h-[100%] object-cover "
@@ -365,46 +355,19 @@ const Executive = ({
               </div>
             </div>
             <div className=" mt-[48px] md:mt-[0px] w-fit">
-              <h4 className="font-[600] text-[24px]">Meet your instructor</h4>
-              <h4 className="text-[#556476] md:text-[24px] md:font-[500] mt-[27px] lg:w-[80%]">
+              <h4 className="font-[600] text-[24px]">Dr Bimbo Mesele</h4>
+              <h4 className="text-[#556476] md:text-[24px] md:font-[500] mt-[27px] ">
                 I am Dr. Bimbo Mesele and I help leaders gain clarity about
                 their lives' journey so that they can redefine their outcomes.
                 As a seasoned clarity coach, I am passionate about helping
                 individuals thrive in their respective sectors by providing
                 insightful guidance and support.{" "}
               </h4>
-              <button className="text-[18px] font-[500] leading-[28px] text-primary mt-[27px]">
-                More at about Dr Bimbo here
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="py-[48px] ">
-          <div className="lg:flex gap-[40px]">
-            <div className="lg:w-[60%] bg-[#02152E] rounded-[24px] h-[416px] relative">
-              <Link to="/calendly">
-                <button className="w-[65px] h-[65px] rounded-full border-[1px] border-primary flex justify-center items-center bg-white absolute top-[48px] right-[24px] lg:right-[48px]">
-                  <FiArrowUp className="text-[30px] stroke-[1px] text-primary transform rotate-45" />
+              <Link to="/about">
+                <button className="text-[18px] font-[500] leading-[28px] text-primary mt-[27px]">
+                  More at about Dr Bimbo here
                 </button>
               </Link>
-              <h4 className="text-white text-[36px] lg:text-[48px] font-[600] leading-[44px] absolute bottom-[48px] left-[24px] lg:left-[48px] pr-[24px] lg:pr-[48px]">
-                Schedule a one on one{" "}
-              </h4>
-            </div>
-            <div className="lg:w-[40%] bg-[#FEEFE6] rounded-[24px] h-[416px] relative mt-[40px] lg:mt-[0px]">
-              <button
-                onClick={() => {
-                  setBookAnEvent(!bookAnEvent);
-                }}
-                className="w-[65px] h-[65px] rounded-full border-[1px] border-primary flex justify-center items-center bg-white absolute top-[48px] right-[24px] lg:right-[48px]"
-              >
-                {" "}
-                <FiArrowUp className="text-[30px] stroke-[1px] text-[#021732] transform rotate-45" />
-              </button>
-              <h4 className="text-[#040F16] text-[36px] lg:text-[48px] lg:leading-[60px] font-[600] leading-[44px] absolute bottom-[48px] left-[24px] pr-[24px] lg:left-[48px] lg:pr-[48px]">
-                Book Bimbo Mesele for an event
-              </h4>
             </div>
           </div>
         </div>

@@ -18,14 +18,7 @@ import small2 from "../assets/small2.png";
 import small3 from "../assets/small3.png";
 import { FiArrowUp } from "react-icons/fi";
 
-const Mastery = ({
-  showAssessment,
-  setShowAssessment,
-  getInTouch,
-  setGetInTouch,
-  bookAnEvent,
-  setBookAnEvent,
-}) => {
+const Mastery = ({ showAssessment, setShowAssessment }) => {
   return (
     <div className="-mt-[70px] pt-[70px]">
       <ScrollToTopOnMount />
@@ -37,11 +30,12 @@ const Mastery = ({
                 Gaining Mastery
               </h4>
               <h4 className="text-[16px] font-[500] leading-[24px] text-justify text-text mt-[44px] md:mt-[24px]">
-                This course is designed to enhance participants' communication
-                skills in various personal and professional settings. It covers
-                a range of topics, including verbal and non-verbal
-                communication, active listening, interpersonal skills, and
-                overcoming communication barriers.
+                This coaching package is designed to help you achieve mastery
+                and unlock your full potential by taking control of your
+                destiny, overcoming obstacles, and reaching new heights of
+                success. Through personalized guidance, support, and
+                accountability, you will develop the skills, mindset, and habits
+                necessary to thrive in your personal and professional endeavors.
               </h4>
               <div className="flex gap-[12px] mt-[12px] overflow-x-auto">
                 <div className="flex items-center gap-[4px]">
@@ -102,52 +96,30 @@ const Mastery = ({
                 <h4 className="text-[30px] md:text-[36px] font-[600]">
                   COURSE OVERVIEW
                 </h4>
-                <h4 className="text-[16px] font-[500] leading-[24px] text-justify text-text mt-[16px]">
-                  Become a conscious, inspiring leader. Scale your company.
-                  Enjoy the journey.
-                  <h4 className="pt-[15px] md:pt-[0px]">
-                    Most entrepreneurs experience building a startup as a
-                    violent roller coaster ride, with huge swings of emotion.
-                  </h4>
-                  <button className="text-[16px] font-[600] text-primary mt-[32px] md:mt-[16px]">
-                    See more
-                  </button>
+                <h4 className="text-[16px] font-[500] leading-[24px] text-justify text-text mt-[16px] border-b-[1px] border-gray-200 pb-[24px]">
+                  This course empowers you to make significant contributions,
+                  drive innovation, and pursue your passions with precision and
+                  effectiveness, leading to personal fulfilment, professional
+                  success, and significance. The courses in this package include
+                  getting unstuck, increasing productivity, embarking on a new
+                  journey/project, and thriving.
                 </h4>
               </div>
             </div>
 
             <div>
               <h4 className="text-[30px] md:text-[36px] font-[600]">
-                Who is this course for
+                Who is this course for?
               </h4>
-              <div className="grid gris-cols-1 md:grid-cols-3 gap-[16px] mt-[20px] md:mt-[16px]">
-                <div className="border-[1px] border-gray-200 rounded-[12px] p-[22px] md:p-[24px]">
-                  <div className="w-[48px] h-[48px] rounded-full bg-secondary text-white text-[18px] font-[500] flex justify-center items-center">
-                    01
-                  </div>
-                  <h4 className="mt-[21px] font-[500] text-[16px] text-text">
-                    Startup founders & CEOs (primarily seed, Series A and B with
-                    10 - 100 team members)
-                  </h4>
-                </div>
-                <div className="border-[1px] border-gray-200 rounded-[12px] p-[22px]">
-                  <div className="w-[48px] h-[48px] rounded-full bg-secondary text-white text-[18px] font-[500] flex justify-center items-center">
-                    02
-                  </div>
-                  <h4 className="mt-[21px] font-[500] text-[16px] text-text">
-                    Committed to doing the deep inner work required to
-                    create transformation.
-                  </h4>
-                </div>
-                <div className="border-[1px] border-gray-200 rounded-[12px] p-[22px]">
-                  <div className="w-[48px] h-[48px] rounded-full bg-secondary text-white text-[18px] font-[500] flex justify-center items-center">
-                    03
-                  </div>
-                  <h4 className="mt-[21px] font-[500] text-[16px] text-text">
-                    Want to be part of an amazing, supportive,
-                    heart-centered group of fellow entrepreneurs.
-                  </h4>
-                </div>
+              <div className=" mt-[20px] md:mt-[16px]">
+                <h4 className="text-[16px] font-[500] leading-[24px] text-justify text-text mt-[16px] border-b-[1px] border-gray-200 pb-[24px]">
+                  This course is for individuals who are committed to personal
+                  and professional growth and are ready to take their skills,
+                  mindset, and achievements to the next level. Whether you are
+                  an aspiring entrepreneur, a seasoned professional, or someone
+                  looking to make significant progress in your personal life,
+                  this course is designed to empower you to achieve mastery.
+                </h4>
               </div>
             </div>
 
@@ -162,11 +134,13 @@ const Mastery = ({
                   </div>
                   <div>
                     <h4 className="text-[#35455B text-[18px] md:text-[24px] md:leading-[32px] font-[700] leading-[28px]">
-                      World class coaching on your specific challenges
+                      Transformative coaching tailored to your specific needs
                     </h4>
                     <h4 className="text-[16px] font-[400] text-text mt-[10px]">
-                      During the sessions, you'll have a chance to share your
-                      specific challenges and get coached by Dave and the group.
+                      Receive personalized guidance, support, and accountability
+                      from a dedicated coach who is committed to your success
+                      and well-being. Develop clear, achievable goals and create
+                      actionable plans to pursue your visions with confidence.
                     </h4>
                   </div>
                 </div>
@@ -176,12 +150,13 @@ const Mastery = ({
                   </div>
                   <div>
                     <h4 className="text-[#35455B text-[18px] font-[700] leading-[28px]">
-                      Tools and best practices the best founders use
+                      Develop Mastery Skills
                     </h4>
                     <h4 className="text-[16px] font-[400] text-text mt-[10px]">
-                      You'll learn the specific tools that work for Dave's
-                      clients to listen and communicate powerfully, inspire and
-                      align your team and create results.
+                      Acquire the knowledge, skills, and habits needed to excel
+                      in your chosen field or area of focus. You will also
+                      cultivate a strong sense of self-confidence and resilience
+                      to overcome challenges and setbacks.
                     </h4>
                   </div>
                 </div>
@@ -191,14 +166,12 @@ const Mastery = ({
                   </div>
                   <div>
                     <h4 className="text-[#35455B text-[18px] font-[700] leading-[28px]">
-                      Supportive group of CEO peers
+                      Progress Tracking and Feedback
                     </h4>
                     <h4 className="text-[16px] font-[400] text-text mt-[10px]">
-                      You'll become part of a group of CEOs, creating deep,
-                      authentic connections, getting real with each other and
-                      sharing vulnerably about their experiences and challenges.
-                      We'll create a Slack group for ongoing support from one
-                      another, and from Dave, throughout course.
+                      Receive regular progress tracking and feedback from your
+                      coach, allowing you to monitor your growth throughout the
+                      coaching journey and make adjustments as needed.
                     </h4>
                   </div>
                 </div>
@@ -208,11 +181,27 @@ const Mastery = ({
                   </div>
                   <div>
                     <h4 className="text-[#35455B text-[18px] font-[700] leading-[28px]">
-                      Identify and let go of your limiting beliefs
+                      Access to valuable coaching resources
                     </h4>
                     <h4 className="text-[16px] font-[400] text-text mt-[10px]">
-                      You'll discover the beliefs and patterns that are getting
-                      in the way of your success, and learn to transcend them.
+                      Gain access to resources, tools, and materials tailored to
+                      support your personal growth journey, providing additional
+                      insights and strategies to enhance your progress outside
+                      of coaching sessions.
+                    </h4>
+                  </div>
+                </div>
+                <div className="flex gap-[24px]">
+                  <div className="min-w-[48px] h-[48px] rounded-full border-[1px] border-primary flex justify-center items-center">
+                    <img className="w-[32px]" src={check} />
+                  </div>
+                  <div>
+                    <h4 className="text-[#35455B text-[18px] font-[700] leading-[28px]">
+                      Empowering community support
+                    </h4>
+                    <h4 className="text-[16px] font-[400] text-text mt-[10px]">
+                      You can join a supportive community of like-minded
+                      individuals to collaborate, learn, and grow together.
                     </h4>
                   </div>
                 </div>
@@ -238,7 +227,7 @@ const Mastery = ({
                       <img className="w-[32px] h-[32px]" src={d2} />
                     </div>
                     <h4 className="text-[#35455B] font-[600] text-[16px]">
-                      Lifetime access to course materials
+                      Access to class recordings and coaching materials
                     </h4>
                   </div>
                   <div className="flex gap-[24px] items-center">
@@ -251,14 +240,15 @@ const Mastery = ({
                   </div>
                   <div className="flex gap-[24px] items-center">
                     <div className="min-w-[32px]">
-                      <img className="w-[32px] h-[32px]" src={d4} />
+                      <img className="w-[32px] h-[32px]" src={d8} />
                     </div>
                     <h4 className="text-[#35455B] font-[600] text-[16px]">
-                      Projects to apply learnings
+                      Private community of peers for group and hybrid coaching
+                      option
                     </h4>
                   </div>
                 </div>
-                <div className="grid grid-cols-1 gap-[16px]">
+                <div className="grid grid-cols-1 gap-[16px] h-fit">
                   <div className="flex gap-[24px] items-center">
                     <div className="min-w-[32px]">
                       <img className="w-[32px] h-[32px]" src={d5} />
@@ -281,14 +271,6 @@ const Mastery = ({
                     </div>
                     <h4 className="text-[#35455B] font-[600] text-[16px]">
                       Course certificate upon completion
-                    </h4>
-                  </div>
-                  <div className="flex gap-[24px] items-center">
-                    <div className="min-w-[32px]">
-                      <img className="w-[32px] h-[32px]" src={d8} />
-                    </div>
-                    <h4 className="text-[#35455B] font-[600] text-[16px]">
-                      Private community of peers
                     </h4>
                   </div>
                 </div>
@@ -315,14 +297,29 @@ const Mastery = ({
                   communication, active listening, interpersonal skills, and
                   overcoming communication barriers.
                 </h4>
-                <div className="flex gap-[12px] mt-[12px]">
-                  <h4 className="text-[12px] font-[500] text-text">
-                    Starting May 9
-                  </h4>
-                  <h4 className="text-[12px] font-[500] text-text">
-                    Duration 6 Weeks
-                  </h4>
-                  <h4 className="text-[12px] font-[500] text-text">Online</h4>
+                <div className="flex gap-[12px] mt-[12px] overflow-x-auto">
+                  <div className="flex items-center gap-[4px]">
+                    <div>
+                      <img className="w-[16px]" src={small1} />
+                    </div>
+                    <h4 className="text-[12px] font-[500] text-text">
+                      Starting May 9
+                    </h4>
+                  </div>
+                  <div className="flex items-center gap-[4px]">
+                    <div>
+                      <img className="w-[16px]" src={small2} />
+                    </div>
+                    <h4 className="text-[12px] font-[500] text-text">
+                      Duration 6 Weeks
+                    </h4>
+                  </div>
+                  <div className="flex items-center gap-[4px]">
+                    <div>
+                      <img className="w-[16px]" src={small3} />
+                    </div>
+                    <h4 className="text-[12px] font-[500] text-text">Online</h4>
+                  </div>
                 </div>
                 <h4 className="text-[14px] font-[700] mt-[40px] text-primary">
                   UPCOMING COURSE
@@ -350,12 +347,12 @@ const Mastery = ({
           </div>
         </div>
 
-        <div className="mt-[48px]">
+        <div className="my-[48px] lg:mx-[8%]">
           <h4 className="text-[36px] font-[600] md:flex justify-center">
             Meet your instructor
           </h4>
           <div className="md:flex mt-[10px] md:mt-[28px] md:items-center ">
-            <div className=" md:min-w-[318px] md:mx-[48px] ">
+            <div className=" md:min-w-[318px] md:mr-[48px] ">
               <div className="pb-[100%] md:pb-[115%]  relative overflow-hidden  rounded-[24px] ">
                 <img
                   className=" absolute top-0 left-0 w-[100%] h-[100%] object-cover "
@@ -365,46 +362,19 @@ const Mastery = ({
               </div>
             </div>
             <div className=" mt-[48px] md:mt-[0px] w-fit">
-              <h4 className="font-[600] text-[24px]">Meet your instructor</h4>
-              <h4 className="text-[#556476] md:text-[24px] md:font-[500] mt-[27px] lg:w-[80%]">
+              <h4 className="font-[600] text-[24px]">Dr Bimbo Mesele</h4>
+              <h4 className="text-[#556476] md:text-[24px] md:font-[500] mt-[27px] ">
                 I am Dr. Bimbo Mesele and I help leaders gain clarity about
                 their lives' journey so that they can redefine their outcomes.
                 As a seasoned clarity coach, I am passionate about helping
                 individuals thrive in their respective sectors by providing
                 insightful guidance and support.{" "}
               </h4>
-              <button className="text-[18px] font-[500] leading-[28px] text-primary mt-[27px]">
-                More at about Dr Bimbo here
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <div className="py-[48px] ">
-          <div className="lg:flex gap-[40px]">
-            <div className="lg:w-[60%] bg-[#02152E] rounded-[24px] h-[416px] relative">
-              <Link to="/calendly">
-                <button className="w-[65px] h-[65px] rounded-full border-[1px] border-primary flex justify-center items-center bg-white absolute top-[48px] right-[24px] lg:right-[48px]">
-                  <FiArrowUp className="text-[30px] stroke-[1px] text-primary transform rotate-45" />
+              <Link to="/about">
+                <button className="text-[18px] font-[500] leading-[28px] text-primary mt-[27px]">
+                  More at about Dr Bimbo here
                 </button>
               </Link>
-              <h4 className="text-white text-[36px] lg:text-[48px] font-[600] leading-[44px] absolute bottom-[48px] left-[24px] lg:left-[48px] pr-[24px] lg:pr-[48px]">
-                Schedule a one on one{" "}
-              </h4>
-            </div>
-            <div className="lg:w-[40%] bg-[#FEEFE6] rounded-[24px] h-[416px] relative mt-[40px] lg:mt-[0px]">
-              <button
-                onClick={() => {
-                  setBookAnEvent(!bookAnEvent);
-                }}
-                className="w-[65px] h-[65px] rounded-full border-[1px] border-primary flex justify-center items-center bg-white absolute top-[48px] right-[24px] lg:right-[48px]"
-              >
-                {" "}
-                <FiArrowUp className="text-[30px] stroke-[1px] text-[#021732] transform rotate-45" />
-              </button>
-              <h4 className="text-[#040F16] text-[36px] lg:text-[48px] lg:leading-[60px] font-[600] leading-[44px] absolute bottom-[48px] left-[24px] pr-[24px] lg:left-[48px] lg:pr-[48px]">
-                Book Bimbo Mesele for an event
-              </h4>
             </div>
           </div>
         </div>

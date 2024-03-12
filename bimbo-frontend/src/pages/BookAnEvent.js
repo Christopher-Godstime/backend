@@ -701,7 +701,7 @@ const ContactForm = ({ bookAnEvent, setBookAnEvent }) => {
                 {page !== formTiles.length - 1 && (
                   <buttton
                     onClick={handleNext}
-                    className="text-white bg-secondary hover:bg-black px-[20px] py-[10px] rounded-[8px] font-[500] md:w-[164px] w-full ml-auto cursor-pointer flex justify-center"
+                    className="text-white bg-secondary hover:bg-black px-[20px] py-[10px] rounded-[8px] font-[500] w-[164px]  ml-auto cursor-pointer flex justify-center"
                   >
                     Next
                   </buttton>

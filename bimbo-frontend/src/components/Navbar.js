@@ -152,7 +152,7 @@ const Navbar = ({
                     return { color: isActive ? "#F86108" : "white" };
                   }}
                 >
-                  About
+                  Meet Me
                 </NavLink>
               </h4>
               <h4
@@ -195,40 +195,14 @@ const Navbar = ({
                 className="text-[16px] font-[500] md:font-[400] text-white"
               >
                 <NavLink
-                  to="/contact"
+                  to="/executive"
                   style={({ isActive }) => {
                     return { color: isActive ? "#F86108" : "white" };
                   }}
                 >
-                  Contact
+                  Executive Coaching
                 </NavLink>
               </h4>
-              <h4
-                onClick={() => setShow(!show)}
-                className="text-[16px] font-[500] md:font-[400] text-white"
-              >
-                <NavLink
-                  to="/blog"
-                  style={({ isActive }) => {
-                    return { color: isActive ? "#F86108" : "white" };
-                  }}
-                >
-                  Blog
-                </NavLink>
-              </h4>
-              {/* <h4
-                onClick={() => setShow(!show)}
-                className="text-[16px] font-[500] md:font-[400] text-white"
-              >
-                <NavLink
-                  to="/academy"
-                  style={({ isActive }) => {
-                    return { color: isActive ? "#F86108" : "white" };
-                  }}
-                >
-                  Bimbo Messele Academy
-                </NavLink>
-              </h4> */}
               <h4
                 onClick={() => setShow(!show)}
                 className="text-[16px] font-[500] md:font-[400] text-white"
@@ -247,14 +221,40 @@ const Navbar = ({
                 className="text-[16px] font-[500] md:font-[400] text-white"
               >
                 <NavLink
-                  to="/executive"
+                  to="/contact"
                   style={({ isActive }) => {
                     return { color: isActive ? "#F86108" : "white" };
                   }}
                 >
-                  Executive Coaching
+                  Contact
                 </NavLink>
               </h4>
+              {/* <h4
+                onClick={() => setShow(!show)}
+                className="text-[16px] font-[500] md:font-[400] text-white"
+              >
+                <NavLink
+                  to="/blog"
+                  style={({ isActive }) => {
+                    return { color: isActive ? "#F86108" : "white" };
+                  }}
+                >
+                  Blog
+                </NavLink>
+              </h4> */}
+              {/* <h4
+                onClick={() => setShow(!show)}
+                className="text-[16px] font-[500] md:font-[400] text-white"
+              >
+                <NavLink
+                  to="/academy"
+                  style={({ isActive }) => {
+                    return { color: isActive ? "#F86108" : "white" };
+                  }}
+                >
+                  Bimbo Messele Academy
+                </NavLink>
+              </h4> */}
             </div>
             <div className="mt-auto pt-[40px] pb-[28px]">
               <div className="py-[8px] px-[16px] rounded-[8px]  bg-[#021732]">
@@ -344,7 +344,7 @@ const Navbar = ({
               : "translate-y-full"
           } ease-in-out duration-500`}
         >
-          <div className="overflow-y-auto h-[calc(100vh-100px)]">
+          <div className="overflow-y-auto h-[calc(100vh-250px)]">
             <BookAnEvent
               bookAnEvent={bookAnEvent}
               setBookAnEvent={setBookAnEvent}

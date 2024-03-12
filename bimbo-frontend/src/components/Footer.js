@@ -58,16 +58,19 @@ const Footer = () => {
     setEmail("");
   };
   return (
-    <div>
+    <div className="bg-[#010A15]">
       <div className="py-[40px] px-[4%] xl:px-[60px] 2xl:px-[15%] bg-[#010A15]">
         <div className="md:flex justify-between items-center">
           <div>
-            <img className="w-[100px]" src={logo} />
+            <img className="w-[76px]" src={logo} />
           </div>
           <div className="md:w-fit mt-[24px] md:mt-[0px]">
-            <form onSubmit={onSubmit} className="md:flex items-center">
+            <form
+              onSubmit={onSubmit}
+              className="md:flex items-center gap-[20px]"
+            >
               <input
-                className="bg-gray-900 border-[1px] border-[#8B94A1] rounded-l-[8px] px-[14px] py-[10px] w-full md:-mr-[8px] h-[45px] rounded-r-[8px] md:rounded-r-[0px] text-white"
+                className="bg-gray-900 border-[1px] border-[#8B94A1]  px-[14px] py-[10px] w-full  h-[45px] rounded-[8px]  text-white"
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
@@ -112,14 +115,14 @@ const Footer = () => {
             </a>
           </div>
           <div className="order-1 grid grid-cols-1 md:grid-cols-4 gap-y-[24px]   py-[24px] md:py-[0px] md:pb-[24px]">
-            <Link to="/features">
+            <Link to="/about">
               <h4 className="text-white text-[14px] font-[500] leading-[20px] cursor-pointer">
-                Features
+                About
               </h4>
             </Link>
-            <Link to="/pricing">
+            <Link to="/blog">
               <h4 className="text-white text-[14px] font-[500] leading-[20px] cursor-pointer">
-                Pricing
+                Blog
               </h4>
             </Link>
             <Link to="/contact">
