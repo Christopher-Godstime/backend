@@ -141,6 +141,21 @@
 }
 
 
+/* #carousel-container {
+  overflow: hidden;
+}
+
+#carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+} */
+
+
 
 
 

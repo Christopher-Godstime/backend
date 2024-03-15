@@ -102,12 +102,11 @@ const ContactForm = ({ bookAnEvent, setBookAnEvent }) => {
     name: "Nigeria",
     flags: { png: "" },
     idd: { root: "+2", suffixes: ["34"] },
+    area: "923768",
   });
 
   const searchSelectedPhone = phones.find(
-    (obj) =>
-      `${obj.idd.root}${obj.idd.suffixes?.[0]}` ===
-      `${selectedPhone.idd.root}${selectedPhone.idd.suffixes?.[0]}`
+    (obj) => `${obj.area}` === `${selectedPhone.area}`
   );
 
   const handleSelectPhone = (phone) => {
@@ -131,7 +130,6 @@ const ContactForm = ({ bookAnEvent, setBookAnEvent }) => {
   const [page, setPage] = useState(0);
   const [sending, setSending] = useState(false);
   const [successText, setSuccessText] = useState(false);
-
   const formTiles = ["Contact Details", "Event Details"];
 
   //   const handleSubmit = () => {
@@ -699,12 +697,12 @@ const ContactForm = ({ bookAnEvent, setBookAnEvent }) => {
                   </div>
                 )}
                 {page !== formTiles.length - 1 && (
-                  <buttton
+                  <button
                     onClick={handleNext}
                     className="text-white bg-secondary hover:bg-black px-[20px] py-[10px] rounded-[8px] font-[500] w-[164px]  ml-auto cursor-pointer flex justify-center"
                   >
                     Next
-                  </buttton>
+                  </button>
                 )}
               </div>
             )}
@@ -804,8 +802,21 @@ const PhoneDropdown = ({
   setIsOpen2,
 }) => {
   const handleSelectOption = (option) => {
-    onSelect(option);
     setIsOpen2(false);
+    if (option.name.common === "United States") {
+      const selectedPhone = {
+        name: option.name.common,
+        flags: option.flags,
+        idd: {
+          root: "+1",
+          suffixes: [""],
+        },
+        area: "9372610",
+      };
+      onSelect(selectedPhone);
+    } else {
+      onSelect(option);
+    }
   };
 
   return (

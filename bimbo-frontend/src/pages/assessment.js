@@ -105,12 +105,11 @@ const Assessment = ({ showAssessment, setShowAssessment }) => {
     name: "Nigeria",
     flags: { png: "" },
     idd: { root: "+2", suffixes: ["34"] },
+    area: "923768",
   });
 
   const searchSelectedPhone = phones.find(
-    (obj) =>
-      `${obj.idd.root}${obj.idd.suffixes?.[0]}` ===
-      `${selectedPhone.idd.root}${selectedPhone.idd.suffixes?.[0]}`
+    (obj) => `${obj.area}` === `${selectedPhone.area}`
   );
 
   const handleSelectPhone = (phone) => {
@@ -151,6 +150,7 @@ const Assessment = ({ showAssessment, setShowAssessment }) => {
       const response = await axios.post(
         "https://backend-t9l2.onrender.com/api/email/send_email",
         {
+          category: 1,
           first_name: formData.firstName,
           last_name: formData.lastName,
           email: formData.email,
@@ -261,7 +261,7 @@ const Assessment = ({ showAssessment, setShowAssessment }) => {
           <div className="lg:p-[32px] pb-[20px] border-b-[1px] border-gray-300">
             <div className="flex justify-between items-center gap-[20px]">
               <h4 className="text-[24px] font-[600] md:text-[36px]">
-                Discovering the New You
+                Clarity Assessment
               </h4>
               <MdOutlineClose
                 onClick={() => setShowAssessment(!showAssessment)}
@@ -515,7 +515,7 @@ const Assessment = ({ showAssessment, setShowAssessment }) => {
                               </span>
                               <span className="text-black">
                                 {searchSelectedPhone
-                                  ? `${searchSelectedPhone.idd.root}${searchSelectedPhone.idd.suffixes[0]}`
+                                  ? `${selectedPhone.idd.root}${selectedPhone.idd.suffixes?.[0]}`
                                   : "Select Location"}
                               </span>
                               <FiChevronDown className="absolute right-[14px] top-1/2 transform -translate-y-1/2 text-[20px] text-gray-400" />
@@ -1480,7 +1480,8 @@ const Assessment = ({ showAssessment, setShowAssessment }) => {
                     <h4 className="text-text font-[500]">Step 4/6</h4>
                   </div>
                   <h4 className="md:text-[36px] md:font-[500]  md:leading-[44px] text-[24px] font-[600] leading-[32px] mt-[40px] md:mt-[0px]">
-                    How clear are you on your long-term goals and aspirations?
+                    How clear are you on your short-term and long-term goals and
+                    aspirations?
                   </h4>
                   <div className="mt-[44px] grid grid-cols-1 md:grid-cols-2 gap-[10px] sm:gap-[40px] md:gap-[10px]">
                     <div className="grid gap-[10px] sm:gap-[40px] md:gap-[10px]  grid-cols-5">
@@ -1918,8 +1919,8 @@ const Assessment = ({ showAssessment, setShowAssessment }) => {
                     <h4 className="text-text font-[500]">Step 5/6</h4>
                   </div>
                   <h4 className="md:text-[36px] md:font-[500]  md:leading-[44px] text-[24px] font-[600] leading-[32px] mt-[40px] md:mt-[0px]">
-                    How clear are you on your short-term and long-term goals/
-                    aspirations?
+                    How clear are you on the impact that you want to have on the
+                    world around you?
                   </h4>
                   <div className="mt-[44px] grid grid-cols-1 md:grid-cols-2 gap-[10px] sm:gap-[40px] md:gap-[10px]">
                     <div className="grid gap-[10px] sm:gap-[40px] md:gap-[10px]  grid-cols-5">
@@ -2876,7 +2877,7 @@ const Assessment = ({ showAssessment, setShowAssessment }) => {
             </div>
             <h4 className="text-[24px] leading-[32px] font-[600] text-center text-black mt-[40px] md:text-[36px] md:font-[500px] md:leading-[44px] md:mt-[70px] md:mx-[16%] mx-[6%]">
               Thank you for taking the clarity assessment. Your score has been
-              sent to your email’
+              sent to your email
             </h4>
             <div className="flex justify-center md:mt-[60px] mt-[50px] md:mx-[8%] mx-[6%]">
               <button
@@ -2947,8 +2948,21 @@ const PhoneDropdown = ({
   setIsOpen2,
 }) => {
   const handleSelectOption = (option) => {
-    onSelect(option);
     setIsOpen2(false);
+    if (option.name.common === "United States") {
+      const selectedPhone = {
+        name: option.name.common,
+        flags: option.flags,
+        idd: {
+          root: "+1",
+          suffixes: [""],
+        },
+        area: "9372610",
+      };
+      onSelect(selectedPhone);
+    } else {
+      onSelect(option);
+    }
   };
 
   return (

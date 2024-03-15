@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import home2 from "../assets/home2.png";
-import pic2 from "../assets/pic2.png";
+import pic3 from "../assets/pic3.png";
 import ScrollToTopOnMount from "../components/ScrollToTopOnMount";
 import { FiArrowUp } from "react-icons/fi";
 
@@ -17,7 +17,7 @@ const About = ({ getInTouch, setGetInTouch, bookAnEvent, setBookAnEvent }) => {
           <div
             className={`bg-no-repeat z-10  w-full bg-cover bg-center md:h-screen h-[259px]  relative rounded-[24px]`}
             style={{
-              backgroundImage: `url(${pic2})`,
+              backgroundImage: `url(${pic3})`,
               backgroundSize: "cover",
               backgroundPosition: "top",
               backdropFilter: "",
@@ -47,7 +47,7 @@ const About = ({ getInTouch, setGetInTouch, bookAnEvent, setBookAnEvent }) => {
               workshops, I train leaders to develop the skills and mindset
               necessary for success in both their personal and professional
               lives. I am committed to evaluating and improving training plans
-              to ensure maximum relevancy and impact for my clients."
+              to ensure maximum relevancy and impact for my clients.
             </h4>
           </div>
         </div>

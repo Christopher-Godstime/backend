@@ -28,6 +28,7 @@ const Navbar = ({
   const isExecutive = location.pathname === "/executive-form";
   const isTraining = location.pathname === "/training-form";
   const isCoaches = location.pathname === "/coach-the-coaches";
+  const masteryAssessment = location.pathname === "/mastery-assessment";
 
   function setFixed() {
     if (window.scrollY >= 400) {
@@ -52,7 +53,7 @@ const Navbar = ({
   }, [show, showAssessment, getInTouch, bookAnEvent]);
 
   return (
-    <div>
+    <div className={masteryAssessment ? "hidden" : ""}>
       <div
         className={
           fix
@@ -285,7 +286,7 @@ const Navbar = ({
         }}
       >
         <div
-          className={`bottom-0 left-1/2 transform -translate-x-1/2 z-40 absolute overflow-y-hidden  bg-white sm:w-[70%] w-[95%] md:rounded-[24px] rounded-[8px] pt-[18px] h-fit ${
+          className={`bottom-0 left-1/2 transform -translate-x-1/2 z-40 absolute overflow-y-hidden  bg-white sm:w-[90%] w-[95%] md:rounded-[24px] rounded-[8px] pt-[18px] h-fit ${
             showAssessment
               ? "top-1/2 transform -translate-y-1/2"
               : "translate-y-full"

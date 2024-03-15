@@ -12,6 +12,13 @@
     />
   </head>
   <style>
+    @media (min-width: 750px) {
+      body {
+        width: 450px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
     .parent {
       background-color: white;
       padding-top: 20px;
@@ -69,6 +76,9 @@
     a {
       text-decoration: none;
     }
+    .details {
+      margin-bottom: 10px;
+    }
   </style>
   <body style="font-family: 'Work Sans', sans-serif">
     <div class="parent">
@@ -78,61 +88,22 @@
           src="<%- base_url %>/assets/mail/logo4.png"
         />
       </div>
-      <h4 class="heading">
-        Your Clarity Assessment overall score is <%- score %>%
-      </h4>
-      <h4 class="hello">Hello <span class="name"> <%- first_name %></span>,</h4>
+
       <h4 class="text">
-        Clarity is in phases, and no matter the phase you are in, your clarity
-        can deepen so that you can achieve better outcomes and we are ready to
-        work with you to become the best version of yourself.
+        <%- first_name %> <%- last_name %> got a score of <%- score %>% in the
+        gaining mastery assessment.
       </h4>
-      <h4 class="text">
-        As a next step, our team is offering you a customized coaching
-        experience through any of these two pathways that we recommend for you:
-      </h4>
-      <div class="background">
-        <img src="<%- base_url %>/assets/mail/background.png" />
+      <div class="details">
+        <span class="heading2" style="color: #000000">Email:</span>
+        <span> <%- email %></span>
       </div>
-      <h4 class="heading2">Discovering the New You</h4>
-      <h4 class="text">
-        This coaching package empowers you to embrace change, unlock hidden
-        talents, and pursue paths aligned with your authentic self. The courses
-        in this package include removing blocks to your clarity,
-        discovering/unleashing a new version of you, leadership, and
-        accountability. To sign up,
-        <a href="<%- base_url %>/discovering-form" target="_blank">
-          <span class="link"> click here. </span>
-        </a>
-      </h4>
-      <h4 class="text">We look forward to welcoming you!</h4>
-      <h4 class="text">
-        Keep transforming,<br />The Bimbo Mesele Coaching Team
-      </h4>
-      <div class="footer">
-        <div class="social">
-          <div>
-            <img
-              class="socialIcon"
-              src="<%- base_url %>/assets/mail/medium.png"
-            />
-          </div>
-          <div>
-            <img
-              class="socialIcon"
-              src="<%- base_url %>/assets/mail/linkedin.png"
-            />
-          </div>
-          <div>
-            <img
-              class="socialIcon"
-              src="<%- base_url %>/assets/mail/instagram.png"
-            />
-          </div>
-          <div>
-            <img class="socialIcon" src="<%- base_url %>/assets/mail/x.png" />
-          </div>
-        </div>
+      <div class="details">
+        <span class="heading2" style="color: #000000">Phone Number:</span>
+        <span> <%- phone_number %></span>
+      </div>
+      <div class="details">
+        <span class="heading2" style="color: #000000">Country:</span>
+        <span> <%- country %></span>
       </div>
     </div>
   </body>

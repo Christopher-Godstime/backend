@@ -23,8 +23,8 @@ const Discovery = ({ showAssessment, setShowAssessment }) => {
     <div className="-mt-[70px] pt-[70px]">
       <ScrollToTopOnMount />
       <div className=" px-[4%] xl:px-[60px] 2xl:px-[15%]">
-        <div class="w-[100%]  xl:-mt-[100px]">
-          <div class="xl:sticky xl:pt-[100px] top-[20px] hidden xl:block xl:w-[40%] xl:ml-[60%] xl:pl-[10px]">
+        <div className="w-[100%]  xl:-mt-[100px]">
+          <div className="xl:sticky xl:pt-[100px] top-[20px] hidden xl:block xl:w-[40%] xl:ml-[60%] xl:pl-[10px]">
             <div className=" ">
               <div className="pb-[40%]  relative overflow-hidden  rounded-t-[24px] ">
                 <img
@@ -92,7 +92,7 @@ const Discovery = ({ showAssessment, setShowAssessment }) => {
               </div>
             </div>
           </div>
-          <div class="xl:w-[60%] xl:-mt-[700px] xl:pr-[70px]">
+          <div className="xl:w-[60%] xl:-mt-[700px] xl:pr-[70px]">
             <div className="pt-[48px]">
               <h4 className="text-[30px] font-[600] md:text-[48px] md:font-[700] md:leading-[60px]">
                 Discovering the New You
@@ -136,12 +136,12 @@ const Discovery = ({ showAssessment, setShowAssessment }) => {
                   </button>
                 </Link>
 
-                <button
+                {/* <button
                   onClick={() => setShowAssessment(!showAssessment)}
                   className="w-full py-[12px] px-[20px] text-secondary rounded-[8px] bg-white text-[14px] font-[500] border-[1px] border-gray-200 hover:bg-gray-100 md:w-fit"
                 >
                   Take an assessment test
-                </button>
+                </button> */}
               </div>
             </div>
 
@@ -165,14 +165,13 @@ const Discovery = ({ showAssessment, setShowAssessment }) => {
                 <h4 className="text-[30px] md:text-[36px] font-[600]">
                   COURSE OVERVIEW
                 </h4>
-                {/* <h4 className="text-[16px] font-[500] leading-[24px] text-justify text-text mt-[16px] border-b-[1px] border-gray-200 pb-[24px]">
-                  This course empowers you to make significant contributions,
-                  drive innovation, and pursue your passions with precision and
-                  effectiveness, leading to personal fulfilment, professional
-                  success, and significance. The courses in this package include
-                  getting unstuck, increasing productivity, embarking on a new
-                  journey/project, and thriving.
-                </h4> */}
+                <h4 className="text-[16px] font-[500] leading-[24px] text-justify text-text mt-[16px] border-b-[1px] border-gray-200 pb-[24px]">
+                  This course empowers you to embrace change, unlock hidden
+                  talents, and pursue paths aligned with your authentic self.
+                  The courses in this package include removing blocks to your
+                  clarity, discovering/unleashing a new version of you,
+                  leadership, and accountability.
+                </h4>
               </div>
             </div>
 

@@ -23,8 +23,8 @@ const Executive = ({ showAssessment, setShowAssessment }) => {
     <div className="-mt-[70px] pt-[70px]">
       <ScrollToTopOnMount />
       <div className=" px-[4%] xl:px-[60px] 2xl:px-[15%]">
-        <div class="w-[100%]  xl:-mt-[100px]">
-          <div class="xl:sticky xl:pt-[100px] top-[20px] hidden xl:block xl:w-[40%] xl:ml-[60%] xl:pl-[10px]">
+        <div className="w-[100%]  xl:-mt-[100px]">
+          <div className="xl:sticky xl:pt-[100px] top-[20px] hidden xl:block xl:w-[40%] xl:ml-[60%] xl:pl-[10px]">
             <div className=" ">
               <div className="pb-[40%]  relative overflow-hidden  rounded-t-[24px] ">
                 <img
@@ -92,7 +92,7 @@ const Executive = ({ showAssessment, setShowAssessment }) => {
               </div>
             </div>
           </div>
-          <div class="xl:w-[60%] xl:-mt-[720px] xl:pr-[70px]">
+          <div className="xl:w-[60%] xl:-mt-[720px] xl:pr-[70px]">
             <div className="pt-[48px]">
               <h4 className="text-[30px] font-[600] md:text-[48px] md:font-[700] md:leading-[60px]">
                 Executive Coaching

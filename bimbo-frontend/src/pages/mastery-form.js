@@ -101,12 +101,11 @@ const ContactForm = () => {
     name: "Nigeria",
     flags: { png: "" },
     idd: { root: "+2", suffixes: ["34"] },
+    area: "923768",
   });
 
   const searchSelectedPhone = phones.find(
-    (obj) =>
-      `${obj.idd.root}${obj.idd.suffixes?.[0]}` ===
-      `${selectedPhone.idd.root}${selectedPhone.idd.suffixes?.[0]}`
+    (obj) => `${obj.area}` === `${selectedPhone.area}`
   );
 
   const handleSelectPhone = (phone) => {
@@ -386,8 +385,21 @@ const PhoneDropdown = ({
   setIsOpen2,
 }) => {
   const handleSelectOption = (option) => {
-    onSelect(option);
     setIsOpen2(false);
+    if (option.name.common === "United States") {
+      const selectedPhone = {
+        name: option.name.common,
+        flags: option.flags,
+        idd: {
+          root: "+1",
+          suffixes: [""],
+        },
+        area: "9372610",
+      };
+      onSelect(selectedPhone);
+    } else {
+      onSelect(option);
+    }
   };
 
   return (

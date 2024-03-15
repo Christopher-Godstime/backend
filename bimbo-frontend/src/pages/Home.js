@@ -16,6 +16,7 @@ import test5 from "../assets/test5.png";
 import quote from "../assets/quote.png";
 import angle from "../assets/angle.png";
 import ScrollToTopOnMount from "../components/ScrollToTopOnMount";
+import VideoCarousel from "../components/VideoCarousel";
 import { MdOutlineClose } from "react-icons/md";
 import { FiArrowUp } from "react-icons/fi";
 
@@ -50,6 +51,24 @@ const testimonials = [
     text: "I have learnt about the different levels of consciousness and how to relate it to rate each aspect of my life. The lessons have been very helpful for me as I start my 2024. ",
     name: "Obe Adedoyin",
   },
+];
+
+const videos = [
+  {
+    url: "https://res.cloudinary.com/dkrltwfgo/video/upload/v1710335653/20240307_2125382_mzuzil.mp4",
+  },
+  {
+    url: "https://res.cloudinary.com/dkrltwfgo/video/upload/v1710499254/YouCut_20240309_140007142-2_sax7si.mp4",
+  },
+  {
+    url: "https://res.cloudinary.com/dkrltwfgo/video/upload/v1710499220/20240307_2231381_1_dh9sml.mp4",
+  },
+];
+
+const slides = [
+  <div className="bg-red-200 h-64">Slide 1</div>,
+  <div className="bg-blue-200 h-64">Slide 2</div>,
+  <div className="bg-green-200 h-64">Slide 3</div>,
 ];
 
 const Home = ({
@@ -223,20 +242,30 @@ const Home = ({
           )}
           {Menus[active].name === "Mission" && (
             <div className="w-full">
-              <h4 className="text-center text-[24px] font-[700] xl:text-[36px] xl:font-[600] xl:leading-[44px] leading-[32px] mt-[60px] md:w-[75%] mx-auto ">
+              <h4 className="text-start text-[24px] font-[700] xl:text-[36px] xl:font-[600] xl:leading-[44px] leading-[32px] mt-[60px] md:w-[75%] mx-auto ">
                 <ul className="list-disc ">
                   <li>
-                    Strategic Guidance: Providing guidance through group,
-                    personal, or hybrid coaching to help leaders gain clarity to
-                    achieve goals effectively.
+                    Strategic Guidance:{" "}
+                    <span className="text-[#556476]">
+                      Providing guidance through group, personal, or hybrid
+                      coaching to help leaders gain clarity to achieve goals
+                      effectively.
+                    </span>
                   </li>
                   <li className="">
-                    Growth: Delivering transformative strategies for remarkable
-                    growth outcomes in personal and professional spheres. 
+                    Growth:{" "}
+                    <span className="text-[#556476]">
+                      Delivering transformative strategies for remarkable growth
+                      outcomes in personal and professional spheres.
+                    </span>
+                     
                   </li>
                   <li>
-                    Supportive Community: Fostering connection and support
-                    through impactful group coaching experiences.
+                    Supportive Community:{" "}
+                    <span className="text-[#556476]">
+                      Fostering connection and support through impactful group
+                      coaching experiences.
+                    </span>
                   </li>
                 </ul>
               </h4>
@@ -324,6 +353,12 @@ const Home = ({
               Take the clarity assessment test
             </button>
           </div>
+        </div>
+      </div>
+
+      <div className="py-[48px] pl-[4%] xl:pl-[60px] 2xl:px-[15%]">
+        <div>
+          <VideoCarousel slides={videos} />
         </div>
       </div>
 
@@ -481,7 +516,7 @@ const Home = ({
         </div>
       </div>
 
-      <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[15%]">
+      {/* <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[15%]">
         <div className="flex justify-between items-end border-b-[1px] border-gray-200 pb-[10px]">
           <h4 className="text-[36px] font-[600] leading-[44px]">
             Recent blog posts
@@ -549,7 +584,7 @@ const Home = ({
             </h4>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <div className="py-[48px] px-[4%] xl:px-[60px] 2xl:px-[15%]">
         <div className="lg:flex gap-[50px] items-center">
@@ -668,12 +703,12 @@ const Home = ({
               Not sure what phase you are in your life's journey or how to
               navigate this season to the next?
             </h4>
-            <h4 className="text-[16px] leading-[24px] md:text-[18px] font-[500] text-[#556476] mt-[20px] text-center mx-[24px] md:mx-[45px] md:leading-[28px]">
+            {/* <h4 className="text-[16px] leading-[24px] md:text-[18px] font-[500] text-[#556476] mt-[20px] text-center mx-[24px] md:mx-[45px] md:leading-[28px]">
               Want to break the cycle of limiting beliefs or break the glass
               ceiling over you? Let's show you how. Begin by taking the Clarity
               Assessment.
-            </h4>
-            <div className="flex justify-center  mt-[20px] md:mx-[8%] mx-[6%] mb-[60px]">
+            </h4> */}
+            <div className="flex justify-center  mt-[40px] md:mx-[8%] mx-[6%] mb-[60px]">
               <button
                 onClick={() => {
                   setPopup1(!popup1);
